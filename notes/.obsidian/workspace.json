@@ -11,26 +11,14 @@
             "id": "3e9eaa27d37af753",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Color Palette.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
-            }
-          }
-        ]
-      },
-      {
-        "id": "33a6670ce65bdf95",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "9e28f7cdfa315eda",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Color Palette"
             }
           }
         ]
@@ -178,8 +166,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "381e9811890048a9",
+  "active": "3e9eaa27d37af753",
   "lastOpenFiles": [
+    "Color Palette.md",
     "Welcome.md"
   ]
 }
