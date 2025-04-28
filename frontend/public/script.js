@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const surnameText = "Yalcin"; // Corrected here
     const container = document.getElementById("name-title");
 
-    const fonts = ["'Press Start 2P'"];
+    const fonts = ["'Poppins'", "'Press Start 2P'"];
     const bgColors = [
         "#ff4757",
         "#1e90ff",
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const fgIndex = Math.floor(Math.random() * fgColors.length);
 
             const rotation = (Math.random() * 30 - 15).toFixed(1);
-            const fontSize = 26 + Math.floor(Math.random() * 10);
+            const fontSize = 35 + Math.floor(Math.random() * 15);
 
             span.style.fontFamily = fonts[fontIndex];
             span.style.backgroundColor = bgColors[bgIndex];
