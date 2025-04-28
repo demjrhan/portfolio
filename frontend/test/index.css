@@ -1,0 +1,68 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 250vh;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    overflow-x: hidden;
+}
+.spacer {
+    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+    width: 100%;
+}
+
+.side-column {
+    background: #1a1a1a;
+}
+
+.garage {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background: #222;
+    position: relative;
+    overflow: hidden;
+}
+
+.garage-top {
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ff0055;
+    letter-spacing: 1px;
+}
+
+.garage-door {
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease;
+    position: relative;
+}
+
+.scroll-indicator {
+    font-family: 'Press Start 2P', monospace;
+    color: red;
+    animation: blink 1s infinite;
+    position: absolute;
+    bottom: 20px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+

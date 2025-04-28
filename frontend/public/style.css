@@ -5,15 +5,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: whitesmoke;
 }
 
 body {
-    background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+    background: darkgrey;
     min-height: 100vh;
 }
 
 .navbar {
+    margin-top: 0;
+    background: #111;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,12 +35,12 @@ body {
     font-weight: 400;
 }
 
-.resume-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-}
+
+
+
+
+
+
 
 .hero {
     display: flex;
@@ -95,6 +97,24 @@ h1 {
 .btn:hover {
     background: #505050;
 }
+
+.ransom-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+.ransom-letter {
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+
 
 .hero-image img {
     width: 300px;
