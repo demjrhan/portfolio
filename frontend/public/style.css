@@ -14,7 +14,6 @@ body {
 }
 
 .navbar {
-    margin-top: 0;
     background: #111;
     display: flex;
     justify-content: space-between;
@@ -37,22 +36,18 @@ body {
 
 
 
-
-
-
-
-
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
     padding: 80px 60px;
     flex-wrap: wrap;
 }
 
 .intro-text {
-    flex: 1;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
 }
 
 .intro-small {
@@ -70,7 +65,6 @@ h1 {
 }
 
 .description {
-    margin: 20px 0;
     font-size: 1.1rem;
     color: #ccc;
 }
@@ -102,7 +96,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    margin-top: 20px;
     line-height: 1.2;
 }
 
@@ -115,9 +108,19 @@ h1 {
 }
 
 
-
-.hero-image img {
-    width: 300px;
-    max-width: 100%;
-    border-radius: 50%;
+.certificates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+}
+.certificate {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20px;
+    height: 200px;
+    width: 250px;
+    background-color: black;
+    box-shadow: 0 0 25px 5px white;
 }
