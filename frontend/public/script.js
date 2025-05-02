@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const fontIndex = Math.floor(Math.random() * fonts.length);
             const bgIndex = Math.floor(Math.random() * bgColors.length);
 
-            const rotation = (Math.random() * 40 - 15).toFixed(1);
+            const rotation = (Math.random() * 35 - 15).toFixed(1);
             const fontSize = 35 + Math.floor(Math.random() * 18);
 
             span.style.fontFamily = fonts[fontIndex];
