@@ -17,38 +17,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const nameText = "Demirhan";
-    const surnameText = "Yalcin"; // Corrected here
+    const nameText = "DEMIRHAN";
+    const surnameText = "YALCIN"; // Corrected here
     const container = document.getElementById("name-title");
 
-    const fonts = ["'Poppins'", "'Press Start 2P'"];
+    const fonts = ["'Press Start 2P'"];
     const bgColors = [
-        "#ff4757",
-        "#1e90ff",
-        "#2ed573",
-        "#ffa502",
-        "#5352ed",
-        "#ff6b81",
-        "#3742fa",
-        "#70a1ff",
-        "#7bed9f",
-        "#ff4757",
-        "#1e90ff",
-        "#2ed573",
-        "#ffa502",
-        "#5352ed",
-        "#ff6b81",
-        "#3742fa",
-        "#70a1ff",
-        "#7bed9f",
-        "#eccc68",
+        "#1e1e2f",
+        "#2d2d44",
+        "#3b3b5b",
+        "#1a1a1a",
+        "#121212",
+        "#232323",
+        "#2f2f2f",
+        "#343a40",
+        "#20232a",
+        "#242424",
+        "#262626",
+        "#2c2c2c",
+        "#1c1c1c",
+        "#1b1f23",
+        "#2e3440",
+        "#3a3f4b",
+        "#2a2a2a",
+        "#303030",
+        "#383838"
     ];
-
-    const fgColors = [
-        "#2f3542",
-        "#ffffff",
-    ];
-
 
 
     function createRansomLine(text) {
@@ -63,14 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const fontIndex = Math.floor(Math.random() * fonts.length);
             const bgIndex = Math.floor(Math.random() * bgColors.length);
-            const fgIndex = Math.floor(Math.random() * fgColors.length);
 
-            const rotation = (Math.random() * 30 - 15).toFixed(1);
-            const fontSize = 35 + Math.floor(Math.random() * 15);
+            const rotation = (Math.random() * 40 - 15).toFixed(1);
+            const fontSize = 35 + Math.floor(Math.random() * 18);
 
             span.style.fontFamily = fonts[fontIndex];
             span.style.backgroundColor = bgColors[bgIndex];
-            span.style.color = fgColors[fgIndex];
+            span.style.color = "#ffffff";
             span.style.transform = `rotate(${rotation}deg)`;
             span.style.fontSize = `${fontSize}px`;
 
@@ -80,6 +73,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     container.appendChild(createRansomLine(nameText));
-    container.appendChild(document.createElement('br'));
     container.appendChild(createRansomLine(surnameText));
 });

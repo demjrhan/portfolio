@@ -9,53 +9,104 @@
 }
 
 body {
-    background: darkgrey;
+    padding-left: 250px;
+    background: url("/img/background.png");
     min-height: 100vh;
 }
 
 .navbar {
+    position: fixed;
+    left: 0;
+    height: 100%;
     background: #111;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 20px 40px;
+
 }
 
-.logo {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-weight: 700;
-    font-size: 2.5em;
-}
+
 
 .nav-links {
     list-style: none;
-    display: flex;
     gap: 30px;
     font-weight: 400;
 }
 
-
-
-.hero {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    padding: 80px 60px;
-    flex-wrap: wrap;
+.nav-links li {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2.5em;
 }
 
-.intro-text {
+.content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 40px;
+    padding: 60px;
+}
+
+.personal-info {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 40px;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 45px rgba(0, 0, 0, 1);
+
+
 }
 
-.intro-small {
-    font-style: italic;
-    font-weight: 500;
-    color: orange;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+
+.personal-info h1 {
+    display: flex;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: black;
+}
+
+.ransom-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    gap: 15px;
+    padding: 70px 0;
+    border-radius: 20px;
+
+}
+
+.ransom-line {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
+}
+
+.ransom-letter {
+    display: inline-block;
+    align-self: center;
+    padding: 5px 6px;
+    margin: 0 1px;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+
+.biography {
+    text-align: justify;
+    color: black;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 h1 {
@@ -64,11 +115,43 @@ h1 {
     line-height: 1.1;
 }
 
-.description {
-    font-size: 1.1rem;
-    color: #ccc;
+.description-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+.certificates {
+    display: grid;
+    height: 25%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 2;
+    grid-row: 1;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    justify-content: center;
+    align-content: center;
+
+}
+.certificates img {
+    height: 320px;
+    width: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.tech-stack{
+    grid-column: 2;
+    grid-row: 2;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
 .buttons {
     display: flex;
     gap: 20px;
@@ -92,35 +175,5 @@ h1 {
     background: #505050;
 }
 
-.ransom-text {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    line-height: 1.2;
-}
-
-.ransom-letter {
-    display: inline-block;
-    padding: 4px 6px;
-    border-radius: 4px;
-    font-weight: 700;
-    transition: transform 0.2s ease;
-}
 
 
-.certificates {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 40px;
-}
-.certificate {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    border-radius: 20px;
-    height: 200px;
-    width: 250px;
-    background-color: black;
-    box-shadow: 0 0 25px 5px white;
-}
