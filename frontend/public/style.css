@@ -10,14 +10,15 @@
 
 body {
     padding-left: 250px;
-    background-color: #c7ff99;
-    background-image: radial-gradient(at 33% 28%, hsla(164, 61%, 76%, 1) 0px, transparent 50%),
-    radial-gradient(at 78% 33%, hsla(314, 81%, 62%, 1) 0px, transparent 50%),
-    radial-gradient(at 4% 57%, hsla(256, 82%, 71%, 1) 0px, transparent 50%),
-    radial-gradient(at 18% 59%, hsla(239, 76%, 68%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 7%, hsla(359, 78%, 64%, 1) 0px, transparent 50%),
-    radial-gradient(at 8% 68%, hsla(63, 87%, 78%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 18%, hsla(314, 94%, 61%, 1) 0px, transparent 50%);
+    background-color:#99b9ff;
+    background-image:
+            radial-gradient(at 34% 3%, hsla(245,67%,72%,1) 0px, transparent 50%),
+            radial-gradient(at 23% 90%, hsla(64,60%,61%,1) 0px, transparent 50%),
+            radial-gradient(at 71% 81%, hsla(150,62%,74%,1) 0px, transparent 50%),
+            radial-gradient(at 4% 81%, hsla(69,96%,75%,1) 0px, transparent 50%),
+            radial-gradient(at 3% 36%, hsla(61,65%,77%,1) 0px, transparent 50%),
+            radial-gradient(at 5% 35%, hsla(155,66%,77%,1) 0px, transparent 50%),
+            radial-gradient(at 53% 23%, hsla(138,93%,61%,1) 0px, transparent 50%);
     min-height: 100vh;
 }
 
@@ -178,14 +179,14 @@ h1 {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 25px;
-    height: 600px;
     grid-row: 2 /span 2;
     border-radius: 20px;
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.8);
-    padding: 40px 20px;
+    padding: 40px 40px 200px;
     backdrop-filter: blur(10px);
     background: url("gifs/guitar-kid.gif") no-repeat center;
     background-size: cover;
+
 
 }
 
@@ -201,10 +202,12 @@ h1 {
 }
 
 .logos {
+
     backdrop-filter: blur(3px);
     border-radius: 15px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
     padding: 10px;
