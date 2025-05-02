@@ -31,6 +31,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    width: 250px;
 
 }
 
@@ -47,8 +48,8 @@ body {
 }
 
 .content {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
+    display: flex;
+    flex-direction: row;
     gap: 40px;
     padding: 60px;
     align-items: start;
@@ -56,49 +57,15 @@ body {
 
 
 .personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.8);
-    padding: 40px 20px;
     backdrop-filter: blur(10px);
+    width: 60%;
 }
-
-.personal-info::after {
-    content: "";
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-            120deg,
-            rgba(255, 255, 255, 0) 40%,
-            rgba(255, 255, 255, 0.6) 50%,
-            rgba(255, 255, 255, 0) 60%
-    );
-    animation: shineSweep 5s ease-in-out infinite;
-    z-index: 1;
-    pointer-events: none;
-    mix-blend-mode: screen;
-    opacity: 0.8;
-}
-
-@keyframes shineSweep {
-    0% {
-        transform: translate(-100%, -100%) rotate(25deg);
-    }
-    100% {
-        transform: translate(100%, 100%) rotate(25deg);
-    }
-}
-
-.personal-info * {
-    position: relative;
-    z-index: 2;
-}
-
 
 .ransom-text {
     display: flex;
@@ -107,8 +74,8 @@ body {
     text-align: center;
     margin: 10px;
     gap: 15px;
-    padding: 70px 0;
     border-radius: 20px;
+    padding: 20px;
 
 }
 
@@ -152,37 +119,15 @@ h1 {
 }
 
 
-.certificates {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-row: 1;
-    gap: 20px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    justify-content: center;
-    align-content: center;
 
-}
-
-.certificates img {
-    height: 320px;
-    width: 320px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.tech-stack {
+.tech-stack-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 25px;
-    grid-row: 2 /span 2;
     border-radius: 20px;
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.8);
     padding: 40px 40px 200px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     background: url("gifs/guitar-kid.gif") no-repeat center;
     background-size: cover;
@@ -220,36 +165,68 @@ h1 {
     object-fit: contain;
 }
 
-.buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.btn {
-    padding: 12px 24px;
-    border-radius: 10px;
-    background: #3a3a3a;
-    border: none;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #505050;
-}
 
 
-@media (max-width: 1400px) {
+
+@media (max-width: 1600px) {
+
     .content {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        flex-direction: column;
         padding: 30px;
     }
+    .personal-info {
+        width: 100%;
+    }
+
 
 }
 
+@media (max-width: 768px) {
+
+    .navbar {
+        display: none;
+    }
+
+    body {
+        padding-left: 0;
+    }
+
+    .nav-links li {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .biography {
+        font-size: 1rem;
+    }
+
+    .tech-stack-title {
+        font-size: 2rem;
+    }
+
+    .ransom-letter {
+        font-size: 2rem !important;
+        padding: 3px 4px;
+    }
+
+    .logos img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .tech-stack-container {
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .personal-info {
+        gap: 15px;
+    }
+}

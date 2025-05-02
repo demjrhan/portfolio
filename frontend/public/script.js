@@ -74,4 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     container.appendChild(createRansomLine(nameText));
     container.appendChild(createRansomLine(surnameText));
+
 });
+

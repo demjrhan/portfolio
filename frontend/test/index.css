@@ -15,7 +15,7 @@ body, html {
     background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
 }
 
-.container {
+.cat-wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     height: 100vh;
