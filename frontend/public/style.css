@@ -200,7 +200,7 @@ h1 {
     }
 
     .biography {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .tech-stack-title {
@@ -208,17 +208,17 @@ h1 {
     }
 
     .ransom-letter {
-        font-size: 2rem !important;
+        font-size: 3rem !important;
         padding: 3px 4px;
     }
 
     .logos img {
-        height: 60px;
-        width: 60px;
+        height: 80px;
+        width: 80px;
     }
 
     .tech-stack-container {
-        padding: 20px;
+        padding: 20px 20px 160px;
     }
 
     .content {
@@ -227,6 +227,7 @@ h1 {
     }
 
     .personal-info {
-        gap: 15px;
+        gap: 25px;
+        padding-bottom: 50px;
     }
 }
