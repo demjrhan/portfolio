@@ -64,7 +64,7 @@ body {
     overflow: hidden;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    width: 60%;
+    width: 70%;
 }
 
 .ransom-text {
@@ -111,13 +111,6 @@ h1 {
     font-weight: 800;
     line-height: 1.1;
 }
-
-.description-right {
-    display: grid;
-    grid-auto-rows: min-content;
-    gap: 20px;
-}
-
 
 
 .tech-stack-container {
