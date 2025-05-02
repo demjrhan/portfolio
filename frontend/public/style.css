@@ -244,7 +244,7 @@ h1 {
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1400px) {
     .content {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
