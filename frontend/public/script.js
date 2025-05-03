@@ -75,6 +75,35 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(createRansomLine(nameText));
         container.appendChild(createRansomLine(surnameText));
 
+    const navbar = document.querySelector('.navbar');
+    const landingSection = document.getElementById('landing');
+    const body = document.querySelector('body');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (window.innerWidth > 868) {
+                if (entry.isIntersecting) {
+                    navbar.classList.add('hidden');
+                    body.style.marginLeft = '0px';
+                } else {
+                    navbar.classList.remove('hidden');
+                    body.style.marginLeft = '250px';
+                }
+            }
+
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    observer.observe(landingSection);
+
+    const menuToggle = document.querySelector('.navbar-toggle');
+
+    menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('show');
+        document.body.classList.toggle('mobile-nav-open');
+    });
 
 
 });
