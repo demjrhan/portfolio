@@ -48,6 +48,7 @@ body {
     width: 250px;
     transition: opacity 0.4s ease, visibility 0.4s ease, transform 1s ease;
     transform: translateX(0);
+    opacity: 0;
 }
 
 .navbar.hidden {
@@ -69,6 +70,36 @@ body {
     font-size: 2.5em;
 }
 
+.ide-background {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 80vh;
+}
+#landing {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 5rem;
+    color: black;
+    text-align: center;
+}
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-keyword {
+    display: inline-block;
+    animation: slideInFromTop 1s ease-out;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -83,8 +114,6 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    padding: 60px;
 }
 .page-1 {
     width: 100%;

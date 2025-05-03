@@ -1,21 +1,85 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const resumeBtn = document.querySelector('.resume-btn');
-    const resumeContainer = document.querySelector('.resume-container');
-    const downloadLink = document.querySelector('.download-link');
 
-    if (resumeContainer && resumeBtn && downloadLink) {
-        resumeContainer.addEventListener('mouseenter', () => {
-            resumeBtn.style.top = '-15px';
-            downloadLink.style.opacity = '1';
-            downloadLink.style.pointerEvents = 'all';
-        });
 
-        resumeContainer.addEventListener('mouseleave', () => {
-            resumeBtn.style.top = '0';
-            downloadLink.style.opacity = '0';
-            downloadLink.style.pointerEvents = 'none';
+    const languageList = [
+        'console.log("Hello, x!");',
+        'print("Hello, x!")',
+        'System.out.println("Hello, x!");',
+        'std::cout << "Hello, x!" << std::endl;',
+        'Console.WriteLine("Hello, x!");'
+    ];
+
+    const keywordList = [
+        'World',
+        'Programmer',
+        'Developer',
+        'Coder',
+        'Recruiter',
+        'Friend'
+    ];
+    const gradientColors = [
+        'hsla(120, 40%, 30%, 1)',
+        'hsla(30, 60%, 40%, 1)',
+        'hsla(200, 70%, 35%, 1)',
+        'hsla(90, 50%, 35%, 1)',
+        'hsla(20, 70%, 30%, 1)',
+        'hsla(160, 40%, 30%, 1)',
+        'hsla(220, 50%, 35%, 1)'
+    ];
+
+
+
+    const landing = document.getElementById('landing');
+    const languageIndex = Math.floor(Math.random() * languageList.length);
+    const baseSyntax = languageList[languageIndex];
+    let keywordIndex = 0;
+
+    landing.innerHTML = "Welcome to my portfolio!";
+
+    setInterval(() => {
+        const randomColor = gradientColors[Math.floor(Math.random() * gradientColors.length)];
+        const coloredKeyword = `<span class="animated-keyword" style="color: ${randomColor}; font-family: 'Pixelify Sans', sans-serif">${keywordList[keywordIndex]}</span>`;
+        landing.innerHTML = baseSyntax.replace("x", coloredKeyword);
+        keywordIndex = (keywordIndex + 1) % keywordList.length;
+    }, 2000);
+
+
+
+
+
+
+    const navbar = document.querySelector('.navbar');
+    const landingSection = document.getElementById('landing');
+    const body = document.querySelector('body');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (window.innerWidth > 868) {
+                if (entry.isIntersecting) {
+                    navbar.classList.add('hidden');
+                    navbar.style.opacity = '0';
+                    body.style.marginLeft = '0px';
+                } else {
+                    navbar.classList.remove('hidden');
+                    navbar.style.opacity = '1';
+                    body.style.marginLeft = '250px';
+                }
+            }
+
         });
-    }
+    }, {
+        threshold: 0.3
+    });
+
+    observer.observe(landingSection);
+
+    const navbarToggle = document.querySelector('.navbar-toggle');
+
+    navbarToggle.addEventListener('click', () => {
+        navbar.classList.toggle('show');
+        document.body.classList.toggle('mobile-nav-open');
+    });
+
 
     const nameText = "DEMIRHAN";
     const surnameText = "YALCIN";
@@ -72,38 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return line;
     }
 
-        container.appendChild(createRansomLine(nameText));
-        container.appendChild(createRansomLine(surnameText));
-
-    const navbar = document.querySelector('.navbar');
-    const landingSection = document.getElementById('landing');
-    const body = document.querySelector('body');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (window.innerWidth > 868) {
-                if (entry.isIntersecting) {
-                    navbar.classList.add('hidden');
-                    body.style.marginLeft = '0px';
-                } else {
-                    navbar.classList.remove('hidden');
-                    body.style.marginLeft = '250px';
-                }
-            }
-
-        });
-    }, {
-        threshold: 0.3
-    });
-
-    observer.observe(landingSection);
-
-    const menuToggle = document.querySelector('.navbar-toggle');
-
-    menuToggle.addEventListener('click', () => {
-        navbar.classList.toggle('show');
-        document.body.classList.toggle('mobile-nav-open');
-    });
+    container.appendChild(createRansomLine(nameText));
+    container.appendChild(createRansomLine(surnameText));
 
 
 });
