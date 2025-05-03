@@ -286,7 +286,7 @@ h1 {
 
 
 
-@media (max-width: 868px){
+@media (max-width: 768px){
 
     body {
         margin-left: 0 !important;
@@ -323,7 +323,7 @@ h1 {
     }
 
     .nav-links li {
-        font-size: 1.5em;
+        font-size: 2.2em;
     }
 
     h1 {

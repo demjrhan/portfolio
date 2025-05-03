@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (window.innerWidth > 868) {
+            if (window.innerWidth > 768) {
                 if (entry.isIntersecting) {
                     navbar.classList.add('hidden');
                     navbar.style.opacity = '0';
