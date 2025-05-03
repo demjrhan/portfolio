@@ -240,17 +240,11 @@ h1 {
         width: 100%;
     }
 
-    .page-0 {
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-    }
-    .page-1, .page-2 {
-        width: 100%;
-        height: 100%;
+    .page-0, .page-1, .page-2 {
         flex-direction: column;
         gap: 50px;
     }
+
     .tech-stack-container {
         padding-bottom: 250px;
     }
@@ -287,8 +281,9 @@ h1 {
         opacity: 1;
         visibility: visible;
     }
-
     .page-1, .page-2 {
+        width: 100%;
+        height: 100%;
         gap: 20px;
     }
     body.mobile-nav-open {
