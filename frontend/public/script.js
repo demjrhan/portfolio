@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     content.style.marginLeft = '250px';
                     content.style.filter = 'blur(0px)';
                 }
+            } else {
+                content.style.marginLeft = '0px';
             }
 
         });
