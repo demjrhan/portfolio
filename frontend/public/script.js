@@ -2,11 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const languageList = [
-        'console.log("Hello, x!");',
-        'print("Hello, x!")',
-        'System.out.println("Hello, x!");',
-        'std::cout << "Hello, x!" << std::endl;',
-        'Console.WriteLine("Hello, x!");'
+        'Hello, x!'
     ];
 
     const keywordList = [
@@ -32,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const landing = document.getElementById('landing');
     const languageIndex = Math.floor(Math.random() * languageList.length);
     const baseSyntax = languageList[languageIndex];
+    const content = document.querySelector('.content');
     let keywordIndex = 0;
 
     landing.innerHTML = "Welcome to my portfolio!";
@@ -41,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const coloredKeyword = `<span class="animated-keyword" style="color: ${randomColor}; font-family: 'Pixelify Sans', sans-serif">${keywordList[keywordIndex]}</span>`;
         landing.innerHTML = baseSyntax.replace("x", coloredKeyword);
         keywordIndex = (keywordIndex + 1) % keywordList.length;
-    }, 2000);
+    }, 2500);
 
 
 
@@ -50,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const navbar = document.querySelector('.navbar');
     const landingSection = document.getElementById('landing');
-    const body = document.querySelector('body');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -58,17 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (entry.isIntersecting) {
                     navbar.classList.add('hidden');
                     navbar.style.opacity = '0';
-                    body.style.marginLeft = '0px';
+                    content.style.marginLeft = '0px';
+                    content.style.filter = 'blur(3px)';
                 } else {
                     navbar.classList.remove('hidden');
                     navbar.style.opacity = '1';
-                    body.style.marginLeft = '250px';
+                    content.style.marginLeft = '250px';
+                    content.style.filter = 'blur(0px)';
                 }
             }
 
         });
     }, {
-        threshold: 0.3
+        threshold: 0.8
     });
 
     observer.observe(landingSection);
