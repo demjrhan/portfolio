@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const nameText = "DEMIRHAN";
-    const surnameText = "YALCIN"; // Corrected here
-    const container = document.getElementById("name-title");
+    const surnameText = "YALCIN";
+    const container = document.querySelector(".ransom-text");
 
     const fonts = ["'Press Start 2P'"];
     const bgColors = [
@@ -72,8 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return line;
     }
 
-    container.appendChild(createRansomLine(nameText));
-    container.appendChild(createRansomLine(surnameText));
+        container.appendChild(createRansomLine(nameText));
+        container.appendChild(createRansomLine(surnameText));
+
+
 
 });
 

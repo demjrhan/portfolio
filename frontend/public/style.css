@@ -9,16 +9,15 @@
 }
 
 body {
+    background-color: #99b9ff;
+    background-image: radial-gradient(at 34% 3%, hsla(245, 67%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 23% 90%, hsla(64, 60%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 71% 81%, hsla(150, 62%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 4% 81%, hsla(69, 96%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 3% 36%, hsla(61, 65%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 5% 35%, hsla(155, 66%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 53% 23%, hsla(138, 93%, 61%, 1) 0px, transparent 50%);
     padding-left: 250px;
-    background-color:#99b9ff;
-    background-image:
-            radial-gradient(at 34% 3%, hsla(245,67%,72%,1) 0px, transparent 50%),
-            radial-gradient(at 23% 90%, hsla(64,60%,61%,1) 0px, transparent 50%),
-            radial-gradient(at 71% 81%, hsla(150,62%,74%,1) 0px, transparent 50%),
-            radial-gradient(at 4% 81%, hsla(69,96%,75%,1) 0px, transparent 50%),
-            radial-gradient(at 3% 36%, hsla(61,65%,77%,1) 0px, transparent 50%),
-            radial-gradient(at 5% 35%, hsla(155,66%,77%,1) 0px, transparent 50%),
-            radial-gradient(at 53% 23%, hsla(138,93%,61%,1) 0px, transparent 50%);
     min-height: 100vh;
 }
 
@@ -49,12 +48,49 @@ body {
 
 .content {
     display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.page-1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
     flex-direction: row;
     gap: 40px;
     padding: 60px;
     align-items: start;
 }
 
+.page-2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 20px;
+}
+
+.who-am-i {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+.who-am-i p {
+    font-family: 'Pixelify Sans', sans-serif;
+    color: black;
+
+}
+.who-am-i img {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+}
 
 .personal-info {
     display: flex;
@@ -159,14 +195,13 @@ h1 {
 }
 
 
-
-
 @media (max-width: 1600px) {
 
     .content {
         flex-direction: column;
         padding: 30px;
     }
+
     .personal-info {
         width: 100%;
     }
