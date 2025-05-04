@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const keywordList = [
-        'World',
         'Programmer',
+        'World',
         'Developer',
         'Coder',
         'Recruiter',
