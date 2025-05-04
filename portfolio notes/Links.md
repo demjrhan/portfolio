@@ -8,6 +8,7 @@ my repository link -> https://demjrhan.github.io/portfolio/
 
 git checkout main
 
-git checkout dev -- index.html
-git checkout dev -- public/style.css
-git checkout dev -- public/script.js
+git checkout dev -- /public
+
+
+
