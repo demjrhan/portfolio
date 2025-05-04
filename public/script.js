@@ -67,6 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 content.style.marginLeft = '0px';
+                if (entry.isIntersecting) {
+                    content.style.filter = 'blur(3px)';
+                } else {
+                    content.style.filter = 'blur(0px)';
+                }
             }
 
         });

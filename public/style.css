@@ -319,6 +319,7 @@ h1 {
     }
 
     .navbar.show {
+        display: flex;
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
