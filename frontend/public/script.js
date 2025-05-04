@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    function isMobileView() {
+        return window.innerWidth <= 768;
+    }
 
     const languageList = [
         'Hello, x!'
@@ -50,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (window.innerWidth > 768) {
+            if (!isMobileView()) {
                 if (entry.isIntersecting) {
                     navbar.classList.add('hidden');
                     navbar.style.opacity = '0';
@@ -123,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const bgIndex = Math.floor(Math.random() * bgColors.length);
 
             const rotation = (Math.random() * 35 - 15).toFixed(1);
-            const fontSize = 35 + Math.floor(Math.random() * 18);
+            const fontSize =  40 + Math.floor(Math.random() * 18);
 
             span.style.fontFamily = fonts[fontIndex];
             span.style.backgroundColor = bgColors[bgIndex];
