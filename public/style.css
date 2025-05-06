@@ -426,8 +426,13 @@ footer p {
 
     .page-1 {
         background-color: #99b9ff;
-        background-image: linear-gradient(to bottom, hsla(245, 67%, 72%, 1), hsla(64, 60%, 61%, 1), hsla(150, 62%, 74%, 1), hsla(69, 96%, 75%, 1), hsla(61, 65%, 77%, 1), hsla(155, 66%, 77%, 1), hsla(138, 93%, 61%, 1));
+        background-image: linear-gradient(to bottom, hsla(245, 67%, 72%, 1), hsla(64, 60%, 61%, 1), hsla(150, 62%, 74%, 1), hsla(69, 96%, 75%, 1), hsla(61, 65%, 77%, 1), hsla(155, 66%, 77%, 1));
         gap: 30px;
+        padding: 15px;
+    }
+
+    .page-2 {
+        gap: 50px;
     }
 
     .personal-info {
@@ -436,6 +441,10 @@ footer p {
 
     h1 {
         font-size: 2rem;
+    }
+
+    .projects {
+        font-size: 4rem;
     }
 
     .project {
@@ -458,6 +467,7 @@ footer p {
 
     .biography {
         font-size: 1.5rem;
+        padding: 20px;
     }
 
     .tech-stack-title {
@@ -473,7 +483,7 @@ footer p {
     }
 
     .ransom-letter {
-        font-size: 1.5rem !important;
+        font-size: 1.7rem !important;
     }
 
     .logos img {
@@ -486,7 +496,7 @@ footer p {
     }
 
     .tech-stack-container {
-        background: url("gifs/home-cat.gif") no-repeat right fixed;
+        background: url("gifs/home-cat.gif") no-repeat right;
         background-size: cover;
         padding: 20px 20px 200px;
     }
