@@ -452,12 +452,11 @@ footer p {
     .project {
         width: 95%;
         border-radius: 10px;
+        align-items: center;
+        justify-content: center;
     }
 
     .project img {
-        display: block;
-        box-sizing: border-box;
-        width: 100%;
         border-radius: 10px 10px 0 0;
         box-shadow: none;
     }
