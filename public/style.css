@@ -148,7 +148,8 @@ body {
     color: black;
 }
 
-.project {
+.project-1, .project-2 {
+    width: 90%;
     background-color: #99ceff;
     background-image: radial-gradient(at 43% 18%, hsla(349, 85%, 51%, 1) 0px, transparent 50%),
     radial-gradient(at 0% 60%, hsla(15, 68%, 32%, 1) 0px, transparent 50%),
@@ -161,30 +162,49 @@ body {
     flex-direction: row;
     align-items: center;
     border-radius: 25px;
-    width: 80%;
     height: 100%;
 }
 
-.project img {
-    width: 55%;
-    height: 100%;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
 
+.project-1 img, .project-2 img {
+    height: 100%;
     box-shadow: 0 0 55px rgba(0, 0, 0, 1);
     object-fit: cover;
     z-index: 1000;
 }
 
+.project-1 img {
+    width: 55%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    order: 1;
+}
+.project-1 .description {
+    order: 2;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+.project-2 img {
+    width: 65%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    order: 2;
+}
+.project-2 .description {
+    order: 1;
+    padding: 40px;
+    font-size: 1.9rem;
+}
+
 .description {
     display: flex;
     color: white;
-    font-size: 1.7rem;
-    line-height: 1.6;
     font-family: 'Pixelify Sans', sans-serif;
     text-align: justify;
-    padding-right: 40px;
-    padding-left: 40px;
+
 }
 
 
@@ -360,7 +380,7 @@ footer p {
         width: 100%;
     }
 
-    .project {
+    .project-1, .project-2{
         width: 80%;
         flex-direction: column;
         border-radius: 20px;
@@ -369,13 +389,16 @@ footer p {
         box-shadow: 0 0 50px rgba(0, 0, 0, 1);
     }
 
-    .project img {
+    .project-1 img, .project-2 img {
+        order: 0;
         width: 100%;
-        border-radius: 20px 20px 0 0;
         box-shadow: none;
     }
-
+    .project-1 img, .project-2 img  {
+        border-radius: 20px 20px 0 0;
+    }
     .description {
+        order: 0;
         padding: 20px;
         font-size: 1.6rem;
         line-height: 1.4;
@@ -449,14 +472,14 @@ footer p {
         font-size: 4rem;
     }
 
-    .project {
+    .project-1, .project-2 {
         width: 95%;
         border-radius: 10px;
         align-items: center;
         justify-content: center;
     }
 
-    .project img {
+    .project-1 img, .project-2 img {
         border-radius: 10px 10px 0 0;
         box-shadow: none;
     }
