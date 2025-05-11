@@ -350,7 +350,7 @@ footer p {
 }
 
 
-@media (max-width: 1650px) {
+@media (max-width: 1700px) {
 
     .content {
         flex-direction: column;
@@ -366,7 +366,7 @@ footer p {
     }
 
     .page-1 {
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         gap: 50px;
         height: auto;
@@ -412,7 +412,11 @@ footer p {
     }
 
 }
-
+@media (max-width: 1400px) {
+    .page-1 {
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 768px) {
     .content {
