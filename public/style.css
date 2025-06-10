@@ -73,7 +73,7 @@ body {
 
 #landing {
     font-family: 'Pixelify Sans', sans-serif;
-    font-size: 5rem;
+    font-size: 6rem;
     color: black;
     text-align: center;
 }
@@ -121,7 +121,7 @@ body {
     radial-gradient(at 5% 35%, hsla(155, 66%, 77%, 1) 0px, transparent 50%),
     radial-gradient(at 53% 23%, hsla(138, 93%, 61%, 1) 0px, transparent 50%);
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -132,9 +132,10 @@ body {
 /* page 2 */
 
 .page-2 {
+    background-color: black;
     width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 70px 20px 70px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,13 +143,60 @@ body {
     gap: 70px;
 }
 
+.page-3 {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 70px 20px 70px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+
+
 .projects {
     font-size: 5rem;
     font-family: 'Pixelify Sans', sans-serif;
-    color: black;
+    color: white;
 }
 
-.project-1, .project-2 {
+.project-1 {
+    width: 90%;
+    background-image:  radial-gradient(at 43% 18%, hsla(349, 85%, 51%, 0.9) 0px, transparent 70%),
+    radial-gradient(at 0% 60%, rgba(0, 0, 0, 0.9) 0px, transparent 50%),
+    radial-gradient(at 73% 63%, hsla(225, 91%, 50%, 1) 0px, transparent 100%),
+    radial-gradient(at 0% 60%, rgba(0, 0, 0, 0.9) 0px, transparent 50%),
+    radial-gradient(at 0% 60%, rgba(0, 0, 0, 0.9) 0px, transparent 50%),
+    radial-gradient(at 56% 42%, hsla(0, 0%, 20%, 0.8) 0px, transparent 50%),
+    radial-gradient(at 77% 63%, hsla(349, 85%, 51%, 0.9), transparent 70%),
+    radial-gradient(at 6% 6%, hsla(0, 0%, 20%, 0.8) 0px, transparent 50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 25px;
+    animation: pinkRedGlow 9s infinite;
+
+}
+@keyframes pinkRedGlow {
+    0%   { box-shadow: 0 0 65px hsla(340, 80%, 65%, 0.7); }
+    10%  { box-shadow: 0 0 65px hsla(350, 75%, 55%,  0.7); }
+    20%  { box-shadow: 0 0 65px hsla(345, 85%, 50%,  0.7); }
+    30%  { box-shadow: 0 0 65px hsla(355, 90%, 48%,  0.7); }
+    40%  { box-shadow: 0 0 65px hsla(0, 85%, 50%,  0.7); }
+    50%  { box-shadow: 0 0 65px hsla(345, 95%, 40%,  0.7); }
+    60%  { box-shadow: 0 0 65px hsla(330, 70%, 45%,  0.7); }
+    70%  { box-shadow: 0 0 65px hsla(320, 85%, 55%,  0.7); }
+    80%  { box-shadow: 0 0 65px hsla(300, 80%, 50%,  0.7); }
+    90%  { box-shadow: 0 0 65px hsla(310, 90%, 40%,  0.7); }
+    100% { box-shadow: 0 0 65px hsla(340, 80%, 65%,  0.7); }
+}
+
+
+
+.project-2 {
     width: 90%;
     background-color: #99ceff;
     background-image: radial-gradient(at 43% 18%, hsla(349, 85%, 51%, 1) 0px, transparent 50%),
@@ -162,41 +210,75 @@ body {
     flex-direction: row;
     align-items: center;
     border-radius: 25px;
-    height: 100%;
+    box-shadow: 0 0 55px rgba(0, 0, 0, 1);
+}
+
+.project-3 {
+    width: 90%;
+    background-color:#c1c176;
+    background-image:
+            radial-gradient(at 23% 85%, hsla(134,73%,47%,1) 0px, transparent 50%),
+            radial-gradient(at 97% 15%, hsla(182,75%,48%,1) 0px, transparent 50%),
+            radial-gradient(at 85% 25%, hsla(54,86%,46%,1) 0px, transparent 85%),
+            radial-gradient(at 0% 15%, hsla(270,89%,44%,1) 0px, transparent 50%),
+            radial-gradient(at 25% 55%, hsla(49,83%,39%,1) 0px, transparent 50%),
+            radial-gradient(at 63% 42%, hsla(59,75%,46%,1) 0px, transparent 50%),
+            radial-gradient(at 97% 65%, hsla(269,61%,48%,1) 0px, transparent 50%);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 0 55px rgba(0, 0, 0, 1);
 }
 
 
-.project-1 img, .project-2 img {
+
+.project-1 img, .project-2 img, .project-3 img {
     height: 100%;
-    box-shadow: 0 0 55px rgba(0, 0, 0, 1);
     object-fit: cover;
 }
 
 .project-1 img {
-    width: 55%;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    order: 1;
-}
-.project-1 .description {
-    order: 2;
-    padding-right: 40px;
-    padding-left: 40px;
-    font-size: 2.2rem;
-    line-height: 1.3;
-}
-
-.project-2 img {
     width: 65%;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     order: 2;
 }
-.project-2 .description {
+
+.project-1 .description {
     order: 1;
     padding: 40px;
     font-size: 1.9rem;
 }
+
+.project-2 img {
+    width: 50%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    order: 1;
+}
+
+.project-2 .description {
+    order: 2;
+    padding: 40px;
+    font-size: 2.3rem;
+    line-height: 1.3;
+}
+
+.project-3 img {
+    width: 65%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    order: 2;
+}
+
+.project-3 .description {
+    order: 1;
+    padding: 40px;
+    font-size: 1.9rem;
+}
+
 
 .description {
     display: flex;
@@ -214,7 +296,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    width: 70%;
+    width: 100%;
 }
 
 .ransom-text {
@@ -247,7 +329,7 @@ body {
 .biography {
     text-align: justify;
     color: black;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.5;
     font-family: 'Pixelify Sans', sans-serif;
     transition: all 1s ease;
@@ -272,19 +354,6 @@ h1 {
     background: url("gifs/guitar-kid.gif") no-repeat center;
     background-size: cover;
     transition: all 2s ease;
-
-
-}
-
-.tech-stack-title {
-    color: black;
-    backdrop-filter: blur(3px);
-    width: 100%;
-    border-radius: 15px;
-    text-align: center;
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 10px;
 }
 
 .logos {
@@ -349,7 +418,12 @@ footer p {
 }
 
 
-@media (max-width: 1700px) {
+
+.your-element {
+    animation: glow 5s infinite;
+}
+
+@media (max-width: 1900px) {
 
     .content {
         flex-direction: column;
@@ -379,7 +453,8 @@ footer p {
         width: 100%;
     }
 
-    .project-1, .project-2{
+
+    .project-1, .project-2, .project-3 {
         width: 80%;
         flex-direction: column;
         border-radius: 20px;
@@ -388,14 +463,14 @@ footer p {
         box-shadow: 0 0 50px rgba(0, 0, 0, 1);
     }
 
-    .project-1 img, .project-2 img {
+
+    .project-1 img, .project-2 img, .project-3 img {
         order: 0;
         width: 100%;
         box-shadow: none;
-    }
-    .project-1 img, .project-2 img  {
         border-radius: 20px 20px 0 0;
     }
+
     .description {
         order: 0;
         padding: 20px;
@@ -411,6 +486,7 @@ footer p {
     }
 
 }
+
 @media (max-width: 1400px) {
     .page-1 {
         flex-direction: column;
@@ -475,19 +551,19 @@ footer p {
         font-size: 4rem;
     }
 
-    .project-1, .project-2 {
+    .project-1, .project-2, .project-3 {
         width: 95%;
         border-radius: 10px;
         align-items: center;
         justify-content: center;
     }
 
-    .project-1 img, .project-2 img {
+    .project-1 img, .project-2 img, .project-3 img {
         border-radius: 10px 10px 0 0;
         box-shadow: none;
     }
 
-    .project-1 .description, .project-2 .description {
+    .project-1 .description, .project-2 .description, .project-3 .description {
         max-width: 100%;
         border-radius: 0 0 10px 10px;
         font-size: 1.2rem;
