@@ -1,6 +1,11 @@
 ﻿const keywordList = [
     'Programmer',
+    'World',
+    'Developer',
+    'Recruiter',
+    'Friend'
 ];
+
 
 const gradientColors = [
     'hsla(120, 40%, 30%, 1)',
