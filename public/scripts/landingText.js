@@ -1,9 +1,5 @@
 ﻿const keywordList = [
     'Programmer',
-    'World',
-    'Developer',
-    'Recruiter',
-    'Friend'
 ];
 
 
