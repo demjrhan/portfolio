@@ -1,12 +1,7 @@
-﻿const languageList = [
-    'Hello, x!'
-];
-
-const keywordList = [
+﻿const keywordList = [
     'Programmer',
     'World',
     'Developer',
-    'Coder',
     'Recruiter',
     'Friend'
 ];
@@ -21,18 +16,53 @@ const gradientColors = [
     'hsla(220, 50%, 35%, 1)'
 ];
 
-export function initLandingText() {
+function sleep(ms) {
+    return new Promise(res => setTimeout(res, ms));
+}
+
+export async function initLandingText() {
     const landing = document.getElementById('landing');
-    const languageIndex = Math.floor(Math.random() * languageList.length);
-    const baseSyntax = languageList[languageIndex];
-    let keywordIndex = 0;
+    let idx = 0;
+    while (true) {
+        const word = keywordList[idx];
 
-    landing.innerHTML = "Welcome to my portfolio!";
+        const container = document.createElement('span');
+        container.className = 'typed-keyword';
+        landing.appendChild(container);
 
-    setInterval(() => {
-        const randomColor = gradientColors[Math.floor(Math.random() * gradientColors.length)];
-        const coloredKeyword = `<span class="animated-keyword" style="color: ${randomColor}; font-family: 'Pixelify Sans', sans-serif">${keywordList[keywordIndex]}</span>`;
-        landing.innerHTML = baseSyntax.replace("x", coloredKeyword);
-        keywordIndex = (keywordIndex + 1) % keywordList.length;
-    }, 2500);
+        const cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        cursor.textContent = '|';
+        landing.appendChild(cursor);
+
+        for (let i = 0; i < word.length; i++) {
+            const letterSpan = document.createElement('span');
+            letterSpan.textContent = word[i];
+            letterSpan.style.color = gradientColors[
+                Math.floor(Math.random() * gradientColors.length)
+                ];
+            letterSpan.style.fontFamily = "'Pixelify Sans', sans-serif";
+            container.appendChild(letterSpan);
+            await sleep(200);
+        }
+
+        const excl = document.createElement('span');
+        excl.style.color = 'black';
+        excl.textContent = '!';
+       
+        excl.style.fontFamily = "'Pixelify Sans', sans-serif";
+        container.appendChild(excl);
+
+        await sleep(2000);
+
+        while (container.lastChild) {
+            container.removeChild(container.lastChild);
+            await sleep(100);
+        }
+
+        landing.removeChild(container);
+        landing.removeChild(cursor);
+
+        idx = (idx + 1) % keywordList.length;
+    }
 }
