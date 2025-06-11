@@ -66,9 +66,10 @@ body {
 
 #landing {
     font-family: 'Pixelify Sans', sans-serif;
-    font-size: 6rem;
     color: black;
     white-space: nowrap;
+    font-size: 6rem;
+
 }
 
 #landing .cursor {
@@ -326,11 +327,7 @@ body {
     transition: all 1s ease;
 }
 
-h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.1;
-}
+
 
 
 .tech-stack-container {
@@ -478,17 +475,25 @@ footer p {
 
 }
 
+
 @media (max-width: 1400px) {
     .page-1 {
         flex-direction: column;
     }
 }
+@media (max-width: 1000px) {
+    #landing {
+        font-size: 5rem;
+    }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .content {
         width: 100%;
     }
-
+    #landing {
+        font-size: 3.5rem;
+    }
     /*.navbar-toggle {
         display: flex;
         align-items: center;
@@ -515,9 +520,7 @@ footer p {
         opacity: 1;
         visibility: visible;
     }*/
-    #landing {
-        font-size: 2.5rem;
-    }
+
 
     .page-1 {
         background-color: #99b9ff;
@@ -534,7 +537,7 @@ footer p {
         width: 100%;
     }
 
-    h1 {
+    .ransom-text {
         font-size: 2rem;
     }
 
