@@ -492,7 +492,7 @@ footer p {
         width: 100%;
     }
     #landing {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     /*.navbar-toggle {
         display: flex;
@@ -532,7 +532,9 @@ footer p {
     .page-2 {
         gap: 50px;
     }
-
+    .page-3 {
+        gap: 70px;
+    }
     .personal-info {
         width: 100%;
     }
