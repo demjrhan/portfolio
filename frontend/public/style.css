@@ -492,7 +492,7 @@ footer p {
         width: 100%;
     }
     #landing {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     /*.navbar-toggle {
         display: flex;
@@ -526,7 +526,7 @@ footer p {
         background-color: #99b9ff;
         background-image: linear-gradient(to bottom, hsla(245, 67%, 72%, 1), hsla(64, 60%, 61%, 1), hsla(150, 62%, 74%, 1), hsla(69, 96%, 75%, 1), hsla(61, 65%, 77%, 1), hsla(155, 66%, 77%, 1));
         gap: 30px;
-        padding: 15px;
+        padding: 15px 15px 50px 15px;
     }
 
     .page-2 {
@@ -606,5 +606,10 @@ footer p {
     .personal-info {
         gap: 25px;
         padding-bottom: 50px;
+    }
+}
+@media (max-width: 650px) {
+    #landing {
+        font-size: 2.2rem;
     }
 }
