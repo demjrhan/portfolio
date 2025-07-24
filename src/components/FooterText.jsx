@@ -1,19 +1,17 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-// You can adjust this value to match your desired height (in vw or px)
-const BOX_HEIGHT = '17vw'; // or '50px' if you prefer fixed px
+const BOX_HEIGHT = '17vw';
 
 const texts = [
     'THANK YOU FOR YOUR TIME',
     'SEE YOU NEXT TIME',
 ];
 
-export default function RotatingText() {
+export default function RotatingFooterText() {
     const containerRef = useRef(null);
     const [width, setWidth] = useState(0);
 
-    // Measure the scrolling content width
     useEffect(() => {
         if (containerRef.current) {
             setWidth(containerRef.current.scrollWidth / 2);
