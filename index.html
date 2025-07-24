@@ -1,120 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="public/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
 </head>
-<body>
-<!--<nav class="navbar">
-    <ul class="nav-links">
-
-    </ul>
-</nav>-->
-<!--<button class="navbar-toggle">&#9776;</button> -->
-
-<div class="page-0">
-    <p id="landing">Hello, </p>
-</div>
-
-
-
-<div class="content">
-    <div class="page-1">
-        <div class="personal-info">
-            <h1 class="ransom-text"></h1>
-            <p class="biography">I'm a Computer Science student at the Polish-Japanese Academy of Information
-                Technology, currently specializing in database systems. I enjoy designing clean and efficient backends
-                using C# (ASP.NET Core) and Node.js, and have experience with Java, Python, and SQL through both
-                coursework and personal projects. I've worked on projects like a social media platform, a multilingual
-                typing game, and a boxing club database and many others. Recently, I’ve been diving into Jetpack Compose
-                to expand my
-                skills in Android development. I'm driven by a passion for solving real problems with code and always
-                eager to learn something new.</p>
-        </div>
-
-
-        <div class="tech-stack-container">
-            <div class="logos">
-                <img src="public/images/tech-stack/csharp.png" alt="csharp">
-                <img src="public/images/tech-stack/cplus.png" alt="cplus">
-                <img src="public/images/tech-stack/css.png" alt="css">
-                <img src="public/images/tech-stack/postgresql.png" alt="postgresql">
-                <img src="public/images/tech-stack/sqlite.png" alt="sqlite">
-                <img src="public/images/tech-stack/dotnet.png" alt="dotnet">
-                <img src="public/images/tech-stack/jetpack.png" alt="jetpack">
-                <img src="public/images/tech-stack/nodejs.png" alt="nodejs">
-                <img src="public/images/tech-stack/java.png" alt="java">
-                <img src="public/images/tech-stack/oracle.png" alt="oracle">
-                <img src="public/images/tech-stack/html.png" alt="html">
-                <img src="public/images/tech-stack/git.png" alt="git">
-                <img src="public/images/tech-stack/javascript.png" alt="javascript">
-                <img src="public/images/tech-stack/python.png" alt="python">
-                <img src="public/images/tech-stack/mysql.png" alt="mysql">
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="page-2">
-        <div class="projects">PROJECTS</div>
-        <div class="project-1">
-            <img src="public/images/Vaultive-Home.png" alt="Project Preview"/>
-            <div class="description">
-                Vaultive is a full-stack media streaming platform built using ASP.NET Core (C#), JavaScript, HTML, and
-                CSS, with SQLite for data persistence. It allows users to find and watch movies, documentaries, and
-                short films in one place. Registered users can write reviews for watched content. The platform features
-                a clean UI, dynamic content pages with trailers and reviews, and subscription-based streaming access.
-            </div>
-        </div>
-
-    </div>
-
-    <div class="page-3">
-        <div class="project-2">
-            <img src="public/images/FLY-Home.png" alt="Project Preview"/>
-            <div class="description">
-                FLY (Feel Like Yourself) is a full-stack social media platform built using ASP.NET Core (C#), Node.js,
-                EJS, JavaScript, and CSS, with SQLite for persistence. It features secure user authentication,
-                post creation with image upload, emoji-based reactions, and admin moderation tools. The platform offers
-                a clean, responsive UI and demonstrates effective integration of backend services and frontend
-                rendering.
-            </div>
-        </div>
-        <div class="project-3">
-            <img src="public/images/BOXING_CLUB-Vertabelo.png" alt="Project Preview"/>
-            <div class="description">
-                A boxing-focused membership and training management system built with Microsoft SQL Server and Oracle
-                SQL. It features boxer and trainer registration, weight class assignment, match and record tracking,
-                sponsorship management, and league organization. The system includes complex stored procedures and
-                triggers to automate training assignments, enforce business rules, and maintain data consistency.
-            </div>
-        </div>
-    </div>
-
-</div>
-<footer>
-    <div class="footer-links">
-        <a href="mailto:demirhanylcn@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/demjrhan/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/demjrhan" target="_blank">GitHub</a>
-        <a href="public/resume.pdf" download="Demirhan_Yalcin_Resume.pdf">Download Resume</a>
-    </div>
-    <p>Demirhan Yalcin </p>
-</footer>
-
-
-<script type="module" src="public/scripts/main.js"></script>
+<body class="bg-gray-50 text-gray-800">
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
