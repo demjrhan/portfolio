@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {useRef, useState} from 'react';
 import BackgroundBlobs from './components/BackgroundBlobs';
 
 const articles = [
@@ -40,14 +40,22 @@ export default function App() {
 
     return (
         <>
-            <section className="relative h-screen w-full bg-black overflow-hidden">
-                <h1 className="absolute top-0 left-0 w-full text-center text-white font-extrabold text-[19.5vw] leading-none whitespace-nowrap">
-                    DEMIRHAN
-                </h1>
+            <section className="relative w-full h-screen bg-white overflow-hidden">
+                <section className="relative w-full h-screen bg-white overflow-hidden">
+                    <div className="absolute inset-0 bg-gray-200 z-0"></div>
+                    <div className="absolute top-10 left-10 w-72 h-72 bg-purple-300 rounded-full filter blur-3xl opacity-50 z-0" />
+                    <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400 rounded-full filter blur-2xl opacity-40 z-0" />
+
+                    <div className="absolute top-0 left-0 w-full z-10">
+                        <h1 className="accent-gray-500 font-extrabold text-[19.5vw] leading-none whitespace-nowrap text-center">
+                            WELCOME
+                        </h1>
+                    </div>
+                </section>
             </section>
 
             <section className="relative h-[70vh] py-12 pl-6 flex items-center">
-                <BackgroundBlobs />
+                <BackgroundBlobs/>
 
                 <div className="ml-auto pl-[30%] w-full">
                     <div className="flex items-center justify-between mb-6">
