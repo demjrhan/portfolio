@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react';
 import BackgroundBlobs from './components/BackgroundBlobs';
-import { motion, useInView } from 'framer-motion';
+import {motion, useInView} from 'framer-motion';
+import RotatingText from "./components/FooterText.jsx";
 
 const articles = [
     {
@@ -30,7 +31,7 @@ export default function App() {
     const carouselRef = useRef(null);
     const [hoveredId, setHoveredId] = useState(null);
     const ref = useRef(null);
-    const inView = useInView(ref, { margin: '-50px' });
+    const inView = useInView(ref, {margin: '-50px'});
 
     const scroll = (direction) => {
         if (!carouselRef.current) return;
@@ -46,8 +47,10 @@ export default function App() {
             <section className="relative w-full h-screen bg-white overflow-hidden">
                 <section className="relative w-full h-screen bg-white overflow-hidden">
                     <div className="absolute inset-0 bg-gray-200 z-0"></div>
-                    <div className="absolute top-10 left-10 w-72 h-72 bg-purple-300 rounded-full filter blur-3xl opacity-50 z-0" />
-                    <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400 rounded-full filter blur-2xl opacity-40 z-0" />
+                    <div
+                        className="absolute top-10 left-10 w-72 h-72 bg-purple-300 rounded-full filter blur-3xl opacity-50 z-0"/>
+                    <div
+                        className="absolute bottom-10 right-10 w-80 h-80 bg-purple-400 rounded-full filter blur-2xl opacity-40 z-0"/>
 
                     <div className="absolute top-0 left-0 w-full z-10">
                         <h1 className="accent-gray-500 font-extrabold text-[19.5vw] leading-none whitespace-nowrap text-center">
@@ -61,9 +64,9 @@ export default function App() {
             <motion.section
                 ref={ref}
                 className="relative w-full h-100 bg-black overflow-hidden flex items-center justify-center"
-                animate={{ scaleY: inView ? 1 : 0 }}
-                transition={{ type: 'spring', stiffness: 80, damping: 12 }}
-                style={{ transformOrigin: 'center' }}
+                animate={{scaleY: inView ? 1 : 0}}
+                transition={{type: 'spring', stiffness: 80, damping: 12}}
+                style={{transformOrigin: 'center'}}
             >
                 {/* your content */}
             </motion.section>
@@ -71,7 +74,7 @@ export default function App() {
             <section className="relative h-[70vh] py-12 pl-5 flex items-center">
                 <BackgroundBlobs/>
 
-                <div className="ml-auto pl-[45%]  w-full">
+                <div className="ml-auto pl-5 w-full">
                     <div className="flex items-center justify-between mb-5 pl-2">
                         <h2 className="text-5xl font-extrabold ">Projects</h2>
                         <div className="flex space-x-2 pr-5 pt-3">
@@ -79,12 +82,14 @@ export default function App() {
                                 onClick={() => scroll('left')}
                                 className="w-8 h-8 bg-white rounded-full shadow hover:shadow-md transition"
                                 aria-label="Scroll Left"
-                            >◀</button>
+                            >◀
+                            </button>
                             <button
                                 onClick={() => scroll('right')}
                                 className="w-8 h-8 bg-white rounded-full shadow hover:shadow-md transition"
                                 aria-label="Scroll Right"
-                            >▶</button>
+                            >▶
+                            </button>
                         </div>
                     </div>
 
@@ -131,6 +136,28 @@ export default function App() {
                     </div>
                 </div>
             </section>
+
+            <footer className="w-full bg-black text-white py-4 px-5">
+                    <div className="mt-4 md:mt-0 flex space-x-6">
+                        <a
+                            href="https://github.com/demjrhan"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transform transition-transform duration-200 hover:scale-110 hover:text-purple-400"
+                        >
+                            GitHub
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/demjrhan/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="transform transition-transform duration-200 hover:scale-110 hover:text-blue-200"
+                        >
+                            LinkedIn
+                        </a>
+                </div>
+            </footer>
+            <RotatingText/>
         </>
     );
 }
