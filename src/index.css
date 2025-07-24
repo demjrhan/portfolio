@@ -1,13 +1,6 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-@font-face {
-  font-family: 'black-custom';
-  src: url('public/fonts/black.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 * {
   user-select: none;
@@ -18,7 +11,14 @@
   box-shadow: none !important;
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
 
-h2, p {
+body {
   font-family: 'Poppins', sans-serif;
 }

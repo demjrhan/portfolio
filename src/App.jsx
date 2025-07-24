@@ -1,115 +1,100 @@
-import React, {useState} from 'react';
+import React, {useRef} from 'react';
+import BackgroundBlobs from './components/BackgroundBlobs';
 
-const projects = [
+const articles = [
     {
         id: 1,
-        title: 'Weather Dashboard',
-        description: 'A real‑time weather app using OpenWeatherMap API and React Hooks.'
+        category: 'Category',
+        title: 'Title',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        imageUrl: 'https://i.pinimg.com/736x/99/d6/c3/99d6c37ea8db11ac8148deede4f67407.jpg',
     },
     {
         id: 2,
-        title: 'Todo List',
-        description: 'A minimal todo list with drag‑and‑drop reordering and localStorage sync.'
+        category: 'Category',
+        title: 'Title',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        imageUrl:
+            'https://i.pinimg.com/736x/78/6e/c9/786ec95ec685685e7d3ff3e1140e56ca.jpg',
     },
-    {id: 3, title: 'Portfolio Site', description: 'My personal portfolio built with Next.js and Tailwind CSS.'},
+    {
+        id: 3,
+        category: 'Category',
+        title: 'Title',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        imageUrl:
+            'https://i.pinimg.com/736x/99/d6/c3/99d6c37ea8db11ac8148deede4f67407.jpg',
+    },
+
 ];
 
-function App() {
-    const [darkMode, setDarkMode] = useState(false);
+export default function App() {
+    const carouselRef = useRef(null);
+
+    const scroll = (direction) => {
+        if (!carouselRef.current) return;
+        const cardWidth = 400;
+        carouselRef.current.scrollBy({left: direction === 'left' ? -cardWidth : cardWidth, behavior: 'smooth'});
+    };
 
     return (
-        <div className="relative min-h-screen overflow-hidden">
-            {/* Dark gradient layer */}
-            <div
-                className={`
-          absolute inset-0 transition-opacity duration-700 ease-in-out
-          ${darkMode ? 'opacity-100' : 'opacity-0'}
-          bg-gradient-to-b from-gray-800 to-gray-900
-        `}
-            />
-            {/* Light gradient layer */}
-            <div
-                className={`
-          absolute inset-0 transition-opacity duration-700 ease-in-out
-          ${darkMode ? 'opacity-0' : 'opacity-100'}
-          bg-gradient-to-b from-blue-50 to-white
-        `}
-            />
+        <>
+            <section className="h-screen bg-black"/>
 
-            {/* Content */}
-            <div
-                className={`relative flex items-center justify-center min-h-screen transition-colors duration-500 ease-in-out ${darkMode ? 'text-gray-100' : 'text-gray-900'}`}>
-                <button
-                    onClick={() => setDarkMode(!darkMode)}
-                    className={`
-            absolute top-4 right-4 px-4 py-2 rounded-md shadow
-            transition-colors duration-300
-            ${darkMode ? 'bg-gray-700 text-gray-100' : 'bg-gray-200 text-gray-800'}
-          `}
-                >
-                    {darkMode ? 'Light Mode' : 'Dark Mode'}
-                </button>
+            <section className="relative h-[70vh] py-12 px-6 flex items-center">
+                <BackgroundBlobs/>
 
-                <div className={`
-          w-full max-w-4xl rounded-lg shadow-lg p-6
-          transition-colors duration-500 ease-in-out
-          ${darkMode ? 'bg-gray-800 bg-opacity-50' : 'bg-white bg-opacity-90'}
-        `}>
-                    <div className="flex items-center space-x-2 mb-4">
-                        <>
-                            <span className="w-3 h-3 bg-red-500 rounded-full"/>
-                            <span className="w-3 h-3 bg-yellow-400 rounded-full"/>
-                            <span className="w-3 h-3 bg-green-500 rounded-full"/>
-                        </>
+                <div className="ml-auto pl-[30%] w-full">
+                    <div className="flex items-center justify-between mb-6">
+                        <h2 className="text-5xl font-extrabold px-13">Projects</h2>
+                        <div className="flex space-x-2">
+                            <button
+                                onClick={() => scroll('left')}
+                                className="p-2 bg-white rounded-full shadow hover:bg-gray-100"
+                            >
+                            </button>
+                            <button
+                                onClick={() => scroll('right')}
+                                className="p-2 bg-white rounded-full shadow hover:bg-gray-100"
+                            >
+                            </button>
+                        </div>
                     </div>
 
-                    <h1 className={`text-center text-3xl font-bold mb-6 transition-colors duration-500 ease-in-out ${darkMode ? 'text-white' : 'text-teal-600'}`}>
-                        PORTFOLIO
-                    </h1>
-
-                    <div className="group grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {projects.map((proj) => (
-                            <div
-                                key={proj.id}
+                    <div
+                        ref={carouselRef}
+                        className="flex space-x-8 overflow-x-auto overflow-visible hide-scrollbar px-12 py-5 pb-8"
+                    >
+                        {articles.map((a) => (
+                            <article
+                                key={a.id}
                                 className="
-        cursor-pointer space-y-4
-        transition-transform duration-300
-        hover:scale-105
-        group-hover:blur-sm hover:blur-none
-      "
+    flex-none w-96 bg-white rounded-xl
+    shadow-none
+    transform transition-transform duration-200
+    hover:shadow-[0_4px_10px_rgba(111,78,55,0.25)]
+    hover:scale-102
+  "
                             >
-                                <div className={`
-        w-full aspect-square rounded-md
-        transition-colors duration-500 ease-in-out
-        ${darkMode
-                                    ? 'bg-gradient-to-b from-gray-600 to-gray-500'
-                                    : 'bg-gradient-to-b from-teal-300 to-white'}
-      `}/>
-                                <div className="space-y-1">
-                                    <h2 className={`
-          text-lg font-semibold
-          transition-colors duration-500 ease-in-out
-          ${darkMode ? 'text-gray-200' : 'text-gray-800'}
-        `}>
-                                        {proj.title}
-                                    </h2>
-                                    <p className={`
-          text-sm transition-colors duration-500 ease-in-out
-          ${darkMode ? 'text-gray-400' : 'text-gray-600'}
-        `}>
-                                        {proj.description}
+                                <img
+                                    src={a.imageUrl}
+                                    alt={a.title}
+                                    className="w-full h-44 object-cover rounded-t-xl"
+                                />
+                                <div className="p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                                        {a.category}
                                     </p>
+                                    <h3 className="mt-2 text-lg font-semibold text-gray-900 leading-tight">
+                                        {a.title}
+                                    </h3>
+                                    <p className="mt-3 text-sm text-gray-600">by {a.description}</p>
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
-
                 </div>
-            </div>
-
-        </div>
-
+            </section>
+        </>
     );
 }
-
-export default App;
