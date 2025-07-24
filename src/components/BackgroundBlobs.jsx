@@ -34,7 +34,6 @@ export default function BackgroundBlobs() {
                 }}
             />
 
-            {/* Additional Blobs */}
             <motion.div
                 className="hidden md:block absolute bottom-[15%] right-[10%] w-[250px] h-[250px] bg-amber-600 rounded-full filter blur-3xl opacity-25 -z-10"
                 animate={{

@@ -40,23 +40,31 @@ export default function App() {
 
     return (
         <>
-            <section className="h-screen bg-black" />
+            <section className="relative h-screen w-full bg-black overflow-hidden">
+                <h1 className="absolute top-0 left-0 w-full text-center text-white font-extrabold text-[19.5vw] leading-none whitespace-nowrap">
+                    DEMIRHAN
+                </h1>
+            </section>
 
-            <section className="relative h-[70vh] py-12 px-6 flex items-center">
+            <section className="relative h-[70vh] py-12 pl-6 flex items-center">
                 <BackgroundBlobs />
 
                 <div className="ml-auto pl-[30%] w-full">
                     <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-5xl font-extrabold px-13">Projects</h2>
+                        <h2 className="text-5xl font-extrabold px-10">Projects</h2>
                         <div className="flex space-x-2">
                             <button
                                 onClick={() => scroll('left')}
-                                className="p-2 bg-white rounded-full shadow hover:bg-gray-100"
-                            />
+                                className="w-[30px] h-[30px] p-0 bg-transparent rounded-full shadow hover:shadow-md transition"
+                                aria-label="Scroll Left"
+                            >
+                            </button>
                             <button
                                 onClick={() => scroll('right')}
-                                className="p-2 bg-white rounded-full shadow hover:bg-gray-100"
-                            />
+                                className="w-[30px] h-[30px] p-0 bg-transparent rounded-full shadow hover:shadow-md transition"
+                                aria-label="Scroll Left"
+                            >
+                            </button>
                         </div>
                     </div>
 
