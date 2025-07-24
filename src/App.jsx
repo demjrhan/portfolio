@@ -1,5 +1,6 @@
 import React, {useRef, useState} from 'react';
 import BackgroundBlobs from './components/BackgroundBlobs';
+import { motion, useInView } from 'framer-motion';
 
 const articles = [
     {
@@ -28,6 +29,8 @@ const articles = [
 export default function App() {
     const carouselRef = useRef(null);
     const [hoveredId, setHoveredId] = useState(null);
+    const ref = useRef(null);
+    const inView = useInView(ref, { margin: '-50px' });
 
     const scroll = (direction) => {
         if (!carouselRef.current) return;
@@ -54,31 +57,40 @@ export default function App() {
                 </section>
             </section>
 
-            <section className="relative h-[70vh] py-12 pl-6 flex items-center">
+
+            <motion.section
+                ref={ref}
+                className="relative w-full h-100 bg-black overflow-hidden flex items-center justify-center"
+                animate={{ scaleY: inView ? 1 : 0 }}
+                transition={{ type: 'spring', stiffness: 80, damping: 12 }}
+                style={{ transformOrigin: 'center' }}
+            >
+                {/* your content */}
+            </motion.section>
+
+            <section className="relative h-[70vh] py-12 pl-5 flex items-center">
                 <BackgroundBlobs/>
 
-                <div className="ml-auto pl-[30%] w-full">
-                    <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-5xl font-extrabold px-10">Projects</h2>
-                        <div className="flex space-x-2">
+                <div className="ml-auto pl-[45%]  w-full">
+                    <div className="flex items-center justify-between mb-5 pl-2">
+                        <h2 className="text-5xl font-extrabold ">Projects</h2>
+                        <div className="flex space-x-2 pr-5 pt-3">
                             <button
                                 onClick={() => scroll('left')}
-                                className="w-[30px] h-[30px] p-0 bg-transparent rounded-full shadow hover:shadow-md transition"
+                                className="w-8 h-8 bg-white rounded-full shadow hover:shadow-md transition"
                                 aria-label="Scroll Left"
-                            >
-                            </button>
+                            >◀</button>
                             <button
                                 onClick={() => scroll('right')}
-                                className="w-[30px] h-[30px] p-0 bg-transparent rounded-full shadow hover:shadow-md transition"
-                                aria-label="Scroll Left"
-                            >
-                            </button>
+                                className="w-8 h-8 bg-white rounded-full shadow hover:shadow-md transition"
+                                aria-label="Scroll Right"
+                            >▶</button>
                         </div>
                     </div>
 
                     <div
                         ref={carouselRef}
-                        className="flex space-x-8 overflow-x-auto overflow-visible hide-scrollbar px-12 py-5 pb-8"
+                        className="flex space-x-8 overflow-x-auto overflow-visible hide-scrollbar pl-2 py-3"
                     >
                         {articles.map((a) => {
                             const isOther = hoveredId !== null && hoveredId !== a.id;
