@@ -5,7 +5,7 @@ export default function BackgroundBlobs() {
     const blobTransition = {
         repeat: Infinity,
         repeatType: 'mirror',
-        duration: 10,
+        duration: 12,
         ease: 'easeInOut',
     };
 
@@ -22,7 +22,17 @@ export default function BackgroundBlobs() {
             />
 
             <motion.div
-                className="hidden md:block absolute top-[10%] right-[10%] w-[350px] h-[350px] bg-yellow-900 rounded-full filter blur-3xl opacity-50 -z-10"
+                className="hidden md:block absolute bottom-[5%] left-[5%] w-[300px] h-[300px] bg-[#6F4E37] rounded-full filter blur-3xl opacity-35 -z-10"
+                animate={{
+                    x: [0, -30, 20, -15, 0],
+                    y: [0, -10, 15, -5, 0],
+                    rotate: [0, 15, -10, 5, 0],
+                }}
+                transition={blobTransition}
+            />
+
+            <motion.div
+                className="hidden md:block absolute top-[10%] right-[30%] w-[350px] h-[350px] bg-yellow-900 rounded-full filter blur-3xl opacity-50 -z-10"
                 animate={{
                     x: [0, 25, -20, 10, 0],
                     y: [0, 20, -15, 5, 0],

@@ -40,7 +40,7 @@ export default function Projects() {
     };
 
     return (
-        <section className="relative h-[70vh] py-12 pl-5 flex items-center">
+        <section className="relative h-[60vh] py-12 pl-5 flex items-center">
             <BackgroundBlobs/>
 
             <div className="ml-auto pl-5 w-full">
