@@ -3,47 +3,57 @@ export default function Landing() {
         <section
             className="relative w-full h-screen overflow-hidden">
 
-            <div
-                className="absolute top-15 left-15 right-15 bottom-15 overflow-hidden grayscale"
-                style={{
-                    backgroundImage: "url('public/images/background.jpg')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center"
-                }}
-            ></div>
-
             <h1
-                className="absolute  top-20 right-0 transform -translate-x-1/2 font-extrabold leading-none text-white text-center"
+                className="absolute  top-[30px] left-[32px] font-extrabold leading-none text-gray-950 text-center"
                 style={{
-                    writingMode: "vertical-rl",
-                    fontSize: "17vh",
+                    fontSize: "19vw",
                     lineHeight: "1",
                     margin: "0"
                 }}
             >
                 WELCOME
             </h1>
+            <div
+                className="absolute top-25 left-25 right-25 bottom-25 overflow-hidden">
+                <div className="h-full w-full "  style={{
+                    backgroundImage: "url('https://i.pinimg.com/1200x/6e/1c/f5/6e1cf59d9cbf88ac95f25ad69b84c0c9.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center"
+                }}></div>
+                <div className="absolute top-[-70px] left-[-70px] flex flex-col items-end">
+                    <h1
+                        className="font-extrabold leading-none text-white text-center"
+                        style={{
+                            fontSize: "19vw",
+                            lineHeight: "1",
+                            margin: "0"
+                        }}
+                    >
+                        WELCOME
+                    </h1>
+
+                    <div className="flex flex-col items-end gap-5 px-10">
+                        <a
+                            href="#about"
+                            className="text-2xl font-semibold text-white transition transform hover:scale-110"
+                        >
+                            About Me
+                        </a>
+                        <a
+                            href="#projects"
+                            className="text-2xl font-semibold text-white transition transform hover:scale-110"
+                        >
+                            Projects
+                        </a>
+                    </div>
 
 
-
-            <div className="absolute top-15 left-0 w-full h-[3px] bg-gray-600"></div>
-            <div className="absolute top-0 left-15 h-full w-[3px] bg-gray-600"></div>
-            <div className="absolute bottom-15 left-0 w-full h-[3px] bg-gray-600"></div>
-            <div className="absolute top-0 right-15 h-full w-[3px] bg-gray-600"></div>
-
-
-            <div className="relative flex flex-row items-center gap-10 py-3 px-20 z-10">
-                <a
-                    href="#about"
-                    className="text-2xl font-semibold text-black transition transform hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-green-400 hover:to-blue-500 hover:drop-shadow-lg">
-                    About Me
-                </a>
-                <a
-                    href="#projects"
-                    className="text-2xl font-semibold text-black transition transform hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-300 hover:drop-shadow-lg">
-                    Projects
-                </a>
+                </div>
             </div>
+
+
+
+
         </section>
     );
 }
