@@ -20,7 +20,7 @@ export default function TechStack() {
     ];
 
     return (
-        <div id="techstack" className="relative w-full py-8 px-6 overflow-hidden">
+        <div id="techstack" className="relative w-full py-8 px-8 overflow-hidden">
 
             <div
                 className="absolute inset-0 bg-fixed bg-bottom bg-transparent"

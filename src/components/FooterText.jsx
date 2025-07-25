@@ -25,7 +25,7 @@ export default function RotatingFooterText() {
 
     const content = texts.join(' \u00A0\u00A0\u00A0 ') + ' \u00A0\u00A0\u00A0 ';
     const marqueeText = content + content;
-    const scrollDuration = texts.length * 20;
+    const scrollDuration = texts.length * 10;
 
     return (
         <section

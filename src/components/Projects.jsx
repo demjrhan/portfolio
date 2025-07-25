@@ -1,4 +1,5 @@
 import React, {useRef, useState} from 'react';
+import TechStack from "./TechStack.jsx";
 import BackgroundBlobs from "./BackgroundGlobes.jsx";
 
 
@@ -33,7 +34,7 @@ export default function Projects() {
     };
 
     return (
-        <section id="projects" className="relative h-max py-12 pb-10 items-center">
+        <section id="projects" className="relative h-max pt-12 pb-5 items-center">
             <BackgroundBlobs/>
 
             <div className="ml-auto pl-6 w-full">
@@ -97,7 +98,7 @@ export default function Projects() {
                     })}
                 </div>
             </div>
-
+            <TechStack/>
         </section>
     );
 }
