@@ -24,7 +24,7 @@ export default function RotatingFooterText() {
 
     return (
         <section
-            className="relative w-full bg-black overflow-hidden"
+            className="relative w-full my-2 bg-black overflow-hidden"
             style={{ height: BOX_HEIGHT }}
         >
             <div className="absolute inset-0 flex items-center z-10">

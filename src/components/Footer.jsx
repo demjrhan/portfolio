@@ -1,4 +1,5 @@
 import React from "react";
+import RotatingFooterText from "./FooterText.jsx";
 
 export default function Footer() {
     return (
@@ -8,7 +9,7 @@ export default function Footer() {
                     href="https://github.com/demjrhan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transform transition-transform duration-200 hover:scale-110 hover:text-purple-400"
+                    className=" transition transform hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 hover:drop-shadow-lg"
                 >
                     GitHub
                 </a>
@@ -16,11 +17,12 @@ export default function Footer() {
                     href="https://www.linkedin.com/in/demjrhan/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transform transition-transform duration-200 hover:scale-110 hover:text-blue-200"
+                    className=" transition transform hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 hover:drop-shadow-lg"
                 >
                     LinkedIn
                 </a>
             </div>
+            <RotatingFooterText />
         </footer>
     );
 }

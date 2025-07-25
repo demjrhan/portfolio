@@ -5,25 +5,18 @@ import BackgroundBlobs from "./BackgroundGlobes.jsx";
 const projects = [
     {
         id: 1,
-        category: 'Category',
-        title: 'Title',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        category: 'MEDIA CONTENT STREAMING',
+        title: 'Vaultive',
+        description: 'A unified platform that brings together movies, documentaries, and short films from multiple streaming services, making it easy for users to discover and watch content in one place.',
         imageUrl: 'https://i.pinimg.com/736x/f1/47/59/f14759a13a81007765f43131226aa3fc.jpg',
     },
     {
         id: 2,
-        category: 'Category',
-        title: 'Title',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        category: 'SOCIAL MEDIA',
+        title: 'FLY',
+        description: 'A social platform where users can share posts, engage with others through reactions, and interact within a moderated community.',
         imageUrl: 'https://i.pinimg.com/736x/56/35/7d/56357d778607f48fa6139a8acbfbd191.jpg',
-    },
-    {
-        id: 3,
-        category: 'Category',
-        title: 'Title',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        imageUrl: 'https://i.pinimg.com/736x/9e/69/96/9e6996d8daf29437f52cc70b186aca2f.jpg',
-    },
+    }
 ];
 
 export default function Projects() {
