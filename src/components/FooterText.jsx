@@ -4,8 +4,13 @@ import { motion } from 'framer-motion';
 const BOX_HEIGHT = '17vw';
 
 const texts = [
-    'THANK YOU FOR YOUR TIME',
-    'SEE YOU NEXT TIME',
+    'CODE',
+    '✸',
+    'DESIGN',
+    '✸',
+    'DELIVER',
+    '✸',
+    'LET\'S BUILD SOMETHING GREAT',
 ];
 
 export default function RotatingFooterText() {

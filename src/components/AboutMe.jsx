@@ -19,7 +19,7 @@ export default function AboutMe() {
                         from-yellow-400 via-yellow-200 to-yellow-500 [text-shadow:1px_1px_2px_rgba(255,215,0,0.5)]"> Demirhan Yalcin</span>
                     , a Computer Science student in my final year at PJATK.
                     Currently exploring <span className="text-white">Android development with Jetpack Compose</span> and
-                    expanding my skills in <span className="text-white">C#, .NET, and SQL</span> for web projects.
+                    expanding my skills in <span className="text-white">C#, .NET, and SQL</span> for projects.
                     I love solving problems, collaborating with others, and learning something new every day.
                 </p>
                 <p className="mt-4 text-base md:text-lg text-gray-400 italic">
