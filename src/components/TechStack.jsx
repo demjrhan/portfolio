@@ -20,45 +20,28 @@ export default function TechStack() {
     ];
 
     return (
-        <div className="relative w-full py-8 px-6 overflow-hidden">
+        <div id="techstack" className="relative w-full py-8 px-6 overflow-hidden">
 
             <div
-                className="absolute inset-0 bg-fixed bg-center"
-                style={{
-                    backgroundImage: "url('https://i.pinimg.com/736x/69/82/7f/69827f9afcba38505b05dd2ac2a584ab.jpg')"
-                }}
+                className="absolute inset-0 bg-fixed bg-bottom bg-transparent"
             ></div>
 
             <div className="relative grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 w-full">
                 {techs.map((tech, index) => (
-                    <motion.div
+                    <div
                         key={index}
                         className="flex items-center gap-3 px-4 py-2 bg-gradient-to-br from-gray-50 to-gray-100 shadow-md rounded-lg hover:shadow-lg transition-all w-full"
-                        initial={{ scale: 0.95 }}
-                        animate={{
-                            opacity: 1,
-                            scale: 1,
-                            y: [0, -8]
-                        }}
-                        transition={{
-                            delay: index * 0.1,
-                            duration: 1.2,
-                            repeat: Infinity,
-                            repeatType: "mirror",
-                            ease: "easeInOut"
-                        }}
                     >
                         <div className="flex-shrink-0 p-2 bg-white rounded-md shadow-sm">
                             <img
                                 src={tech.src}
                                 alt={tech.alt}
-                                className="grayscale"
                                 style={{ width: tech.size, height: tech.size }}
                             />
 
                         </div>
                         <p className="text-sm font-medium text-gray-800">{tech.alt}</p>
-                    </motion.div>
+                    </div>
                 ))}
             </div>
         </div>

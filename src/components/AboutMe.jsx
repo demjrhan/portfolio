@@ -12,6 +12,7 @@ export default function AboutMe() {
 
     return (
         <motion.section
+            id="about"
             ref={ref}
             className="relative w-full bg-black overflow-hidden flex items-center justify-center"
             initial={{ height: 0 }}
@@ -27,7 +28,7 @@ export default function AboutMe() {
                 </h2>
 
                 <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-                    I’m <span className="text-amber-200 font-semibold">Demirhan Yalcin</span>, a Computer Science student in my final year at PJATK.
+                    I’m <span className="text-[#C0EEF2] font-semibold">Demirhan Yalcin</span>, a Computer Science student in my final year at PJATK.
                     Currently exploring <span className="text-white">Android development with Jetpack Compose</span> and expanding my skills in <span className="text-white">C#, .NET, and SQL</span> for web projects.
                     I love solving problems, collaborating with others, and learning something new every day.
                 </p>

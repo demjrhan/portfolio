@@ -12,7 +12,7 @@ export default function BackgroundBlobs() {
     return (
         <>
             <motion.div
-                className="hidden md:block absolute bottom-[5%] left-[5%] w-[300px] h-[300px] bg-gray-950 rounded-full filter blur-3xl opacity-35 -z-10"
+                className="hidden md:block absolute bottom-[5%] left-[5%] w-[300px] h-[300px] bg-gray-500 rounded-full filter blur-3xl opacity-35 -z-10"
                 animate={{
                     x: [0, -30, 20, -15, 0],
                     y: [0, -10, 15, -5, 0],
@@ -22,7 +22,7 @@ export default function BackgroundBlobs() {
             />
 
             <motion.div
-                className="hidden md:block absolute bottom-[5%] left-[5%] w-[300px] h-[300px] bg-gray-900 rounded-full filter blur-3xl opacity-35 -z-10"
+                className="hidden md:block absolute bottom-[5%] left-[5%] w-[300px] h-[300px] bg-gray-500 rounded-full filter blur-3xl opacity-35 -z-10"
                 animate={{
                     x: [0, -30, 20, -15, 0],
                     y: [0, -10, 15, -5, 0],
@@ -32,7 +32,7 @@ export default function BackgroundBlobs() {
             />
 
             <motion.div
-                className="hidden md:block absolute top-[10%] right-[30%] w-[350px] h-[350px] bg-gray-800 rounded-full filter blur-3xl opacity-50 -z-10"
+                className="hidden md:block absolute top-[10%] right-[30%] w-[350px] h-[350px] bg-gray-500 rounded-full filter blur-3xl opacity-50 -z-10"
                 animate={{
                     x: [0, 25, -20, 10, 0],
                     y: [0, 20, -15, 5, 0],
@@ -45,7 +45,7 @@ export default function BackgroundBlobs() {
             />
 
             <motion.div
-                className="hidden md:block absolute bottom-[15%] right-[10%] w-[250px] h-[250px] bg-gray-600 rounded-full filter blur-3xl opacity-25 -z-10"
+                className="hidden md:block absolute bottom-[15%] right-[10%] w-[250px] h-[250px] bg-gray-500 rounded-full filter blur-3xl opacity-25 -z-10"
                 animate={{
                     x: [0, 10, -10, 0],
                     y: [0, 15, -10, 0],

@@ -40,7 +40,7 @@ export default function Projects() {
     };
 
     return (
-        <section className="relative h-max py-12 pb-10 items-center">
+        <section id="projects" className="relative h-max py-12 pb-10 items-center">
             <BackgroundBlobs/>
 
             <div className="ml-auto pl-6 w-full">

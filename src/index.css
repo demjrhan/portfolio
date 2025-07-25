@@ -11,6 +11,10 @@
   box-shadow: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hide-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
