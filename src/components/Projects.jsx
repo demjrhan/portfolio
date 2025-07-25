@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {motion} from "framer-motion";
+import BackgroundBlobs from "./BackgroundGlobes.jsx";
 
 
 const projects = [
@@ -8,21 +8,21 @@ const projects = [
         category: 'Category',
         title: 'Title',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        imageUrl: 'https://i.pinimg.com/736x/99/d6/c3/99d6c37ea8db11ac8148deede4f67407.jpg',
+        imageUrl: 'https://i.pinimg.com/736x/f1/47/59/f14759a13a81007765f43131226aa3fc.jpg',
     },
     {
         id: 2,
         category: 'Category',
         title: 'Title',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        imageUrl: 'https://i.pinimg.com/736x/78/6e/c9/786ec95ec685685e7d3ff3e1140e56ca.jpg',
+        imageUrl: 'https://i.pinimg.com/736x/56/35/7d/56357d778607f48fa6139a8acbfbd191.jpg',
     },
     {
         id: 3,
         category: 'Category',
         title: 'Title',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        imageUrl: 'https://i.pinimg.com/736x/99/d6/c3/99d6c37ea8db11ac8148deede4f67407.jpg',
+        imageUrl: 'https://i.pinimg.com/736x/9e/69/96/9e6996d8daf29437f52cc70b186aca2f.jpg',
     },
 ];
 
@@ -108,77 +108,3 @@ export default function Projects() {
         </section>
     );
 }
-
-function BackgroundBlobs() {
-    const blobTransition = {
-        repeat: Infinity,
-        repeatType: 'mirror',
-        duration: 12,
-        ease: 'easeInOut',
-    };
-
-    return (
-        <>
-            <motion.div
-                className="hidden md:block absolute bottom-[5%] left-[5%] w-[300px] h-[300px] bg-[#6F4E37] rounded-full filter blur-3xl opacity-35 -z-10"
-                animate={{
-                    x: [0, -30, 20, -15, 0],
-                    y: [0, -10, 15, -5, 0],
-                    rotate: [0, 15, -10, 5, 0],
-                }}
-                transition={blobTransition}
-            />
-
-            <motion.div
-                className="hidden md:block absolute bottom-[5%] left-[5%] w-[300px] h-[300px] bg-[#6F4E37] rounded-full filter blur-3xl opacity-35 -z-10"
-                animate={{
-                    x: [0, -30, 20, -15, 0],
-                    y: [0, -10, 15, -5, 0],
-                    rotate: [0, 15, -10, 5, 0],
-                }}
-                transition={blobTransition}
-            />
-
-            <motion.div
-                className="hidden md:block absolute top-[10%] right-[30%] w-[350px] h-[350px] bg-yellow-900 rounded-full filter blur-3xl opacity-50 -z-10"
-                animate={{
-                    x: [0, 25, -20, 10, 0],
-                    y: [0, 20, -15, 5, 0],
-                    rotate: [0, -20, 10, -5, 0],
-                }}
-                transition={{
-                    ...blobTransition,
-                    duration: 14,
-                }}
-            />
-
-            <motion.div
-                className="hidden md:block absolute bottom-[15%] right-[10%] w-[250px] h-[250px] bg-amber-600 rounded-full filter blur-3xl opacity-25 -z-10"
-                animate={{
-                    x: [0, 10, -10, 0],
-                    y: [0, 15, -10, 0],
-                    rotate: [0, 10, -10, 0],
-                }}
-                transition={{
-                    ...blobTransition,
-                    duration: 12,
-                }}
-            />
-
-            <motion.div
-                className="hidden md:block absolute top-[20%] left-[15%] w-[400px] h-[400px] bg-blue-200 rounded-full filter blur-3xl opacity-45 -z-10"
-                animate={{
-                    x: [0, -15, 15, 0],
-                    y: [0, -20, 10, 0],
-                    rotate: [0, -15, 15, 0],
-                }}
-                transition={{
-                    ...blobTransition,
-                    duration: 16,
-                }}
-            />
-        </>
-    );
-}
-
-
