@@ -23,11 +23,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes slide {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
 }
 
-.animate-spin-slow {
-  animation: spin-slow 16s linear infinite;
+.animate-slide {
+  animation: slide 20s linear infinite;
 }
