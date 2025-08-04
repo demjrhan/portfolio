@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react';
 import TechStack from "./TechStack.jsx";
 import BackgroundBlobs from "./BackgroundGlobes.jsx";
+import SocialLinks from "./SocialLinks.jsx";
 
 const projects = [{
     id: 1,
@@ -50,8 +51,9 @@ export default function Projects() {
     };
 
     return (
-        <section id="projects" className="relative h-max pt-12 pb-5 items-center">
+        <section id="projects" className="relative h-max  pb-5 items-center">
             <BackgroundBlobs/>
+            <SocialLinks/>
             <div className="ml-auto pl-6 w-full">
                 <div className="flex items-center gap-5 mb-5 pl-2">
                     <h2 className="text-5xl font-extrabold ">Projects</h2>

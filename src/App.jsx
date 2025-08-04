@@ -3,7 +3,6 @@ import Projects from "./components/Projects.jsx";
 import AboutMe from "./components/AboutMe.jsx";
 
 
-
 export default function App() {
 
 

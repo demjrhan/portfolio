@@ -15,17 +15,16 @@ export default function AboutMe() {
 
                 <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed">
                     I’m
-                    <span
-                        className="text-transparent bg-clip-text font-semibold bg-gradient-to-r
-                        from-yellow-400 via-yellow-200 to-yellow-500 [text-shadow:1px_1px_2px_rgba(255,215,0,0.5)]"> Demirhan Yalcin</span>
-                    , a Computer Science student in my final year at PJATK.
-                    Currently exploring <span className="text-white">Android development with Jetpack Compose</span> while also expanding my skills in Quality Assurance, including manual testing, bug reporting, and test automation.
-                    I love solving problems, collaborating with others, and learning something new every day.
+                    <span className="text-transparent bg-clip-text font-semibold bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 [text-shadow:1px_1px_2px_rgba(255,215,0,0.5)]"> Demirhan Yalcin</span>
+                    , a final-year Computer Science student at PJATK in Warsaw.
+                    I’m passionate about <span className="text-white">Quality Assurance</span>: from manual testing and bug reporting to learning test automation with tools like Selenium and Jira.
+                    Currently, I’m building a QA portfolio by testing real apps and documenting the full process.
                 </p>
 
                 <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-400 italic">
                     Located in <span className="text-white font-semibold">Warsaw, Poland</span>
                 </p>
+
             </div>
         </section>
     );
