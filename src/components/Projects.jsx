@@ -9,7 +9,7 @@ const projects = [{
     category: 'QUALITY ASSURANCE',
     title: 'QA Practice Suite',
     description: 'A hands-on QA portfolio built to properly document my learning journey. After not maintaining past repositories, I’ve now started structuring my work professionally. Currently focused on manual testing with Jira, updating the repository daily with test cases, bug reports, and progress. Automation and API testing will follow.',
-    imageUrl: '/images/1.jpg',
+    imageUrl: 'public/images/1.jpg',
     tech: ['Java', 'Jira', 'Postman', 'Selenium', 'Swagger'],
     github: 'https://github.com/demjrhan/QA'
 }, {
@@ -17,7 +17,7 @@ const projects = [{
     category: 'MEDIA CONTENT STREAMING',
     title: 'Vaultive',
     description: 'A unified platform that brings together movies, documentaries, and short films from multiple streaming services, making it easy for users to discover and watch content in one place.',
-    imageUrl: '/images/2.jpg',
+    imageUrl: 'public/images/2.jpg',
     tech: ['C#', 'ASP.NET', 'SQLite', 'Entity Framework', 'HTML', 'CSS', 'JavaScript', 'REST API'],
     github: 'https://github.com/demjrhan/Vaultive'
 }, {
@@ -25,7 +25,7 @@ const projects = [{
     category: 'SOCIAL MEDIA',
     title: 'FLY',
     description: 'A social platform where users can share posts, engage with others through reactions, and interact within a moderated community.',
-    imageUrl: '/images/3.jpg',
+    imageUrl: 'public/images/3.jpg',
     tech: ['C#', 'ASP.NET', 'SQLite', 'Node.js', 'JavaScript', 'CSS', 'HTML', 'REST API'],
     github: 'https://github.com/demjrhan/FLY'
 },
@@ -34,7 +34,7 @@ const projects = [{
         category: 'DATABASE DESIGN',
         title: 'BOXING CLUB',
         description: 'Relational database design using Microsoft SQL Server and Oracle SQL. Includes complex stored procedures and triggers to enforce business logic, automate workflows, and ensure data integrity.',
-        imageUrl: '/images/4.jpg',
+        imageUrl: 'public/images/4.jpg',
         tech: ['Microsoft SQL Server', 'Oracle SQL'],
         github: 'https://github.com/demjrhan/BOXING-CLUB'
     }];
