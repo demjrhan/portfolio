@@ -6,7 +6,7 @@ const projects = [{
     id: 1,
     category: 'QUALITY ASSURANCE',
     title: 'QA Practice Suite',
-    description: 'A hands-on QA portfolio project featuring manual test cases, Jira bug reports, API validation with Postman, and basic Selenium (Java) automation scripts for a sample web app.',
+    description: 'A hands-on QA portfolio built to properly document my learning journey. After not maintaining past repositories, I’ve now started structuring my work professionally. Currently focused on manual testing with Jira, updating the repository daily with test cases, bug reports, and progress. Automation and API testing will follow.',
     imageUrl: 'https://i.pinimg.com/1200x/4b/cd/c7/4bcdc7631b0f4b9e31cd5efa3334c999.jpg',
     tech: ['Java', 'Jira', 'Postman', 'Selenium', 'Swagger'],
     github: 'https://github.com/demjrhan/QA'
