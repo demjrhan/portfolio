@@ -18,6 +18,8 @@ export default function TechStack() {
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg", alt: "Selenium", size: 38 },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg", alt: "Jira", size: 38 },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg", alt: "Maven", size: 38 },
+        { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg", alt: "Swagger", size: 38 },
+
     ];
 
     return (
