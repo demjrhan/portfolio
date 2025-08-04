@@ -2,14 +2,14 @@ import React, {useRef, useState} from 'react';
 import TechStack from "./TechStack.jsx";
 import BackgroundBlobs from "./BackgroundGlobes.jsx";
 import SocialLinks from "./SocialLinks.jsx";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {ChevronLeft, ChevronRight} from "lucide-react";
 
 const projects = [{
     id: 1,
     category: 'QUALITY ASSURANCE',
     title: 'QA Practice Suite',
     description: 'A hands-on QA portfolio built to properly document my learning journey. After not maintaining past repositories, I’ve now started structuring my work professionally. Currently focused on manual testing with Jira, updating the repository daily with test cases, bug reports, and progress. Automation and API testing will follow.',
-    imageUrl: 'public/images/1.jpg',
+    imageUrl: '/portfolio/images/1.jpg',
     tech: ['Java', 'Jira', 'Postman', 'Selenium', 'Swagger'],
     github: 'https://github.com/demjrhan/QA'
 }, {
@@ -17,7 +17,7 @@ const projects = [{
     category: 'MEDIA CONTENT STREAMING',
     title: 'Vaultive',
     description: 'A unified platform that brings together movies, documentaries, and short films from multiple streaming services, making it easy for users to discover and watch content in one place.',
-    imageUrl: 'public/images/2.jpg',
+    imageUrl: '/portfolio/images/2.jpg',
     tech: ['C#', 'ASP.NET', 'SQLite', 'Entity Framework', 'HTML', 'CSS', 'JavaScript', 'REST API'],
     github: 'https://github.com/demjrhan/Vaultive'
 }, {
@@ -25,7 +25,7 @@ const projects = [{
     category: 'SOCIAL MEDIA',
     title: 'FLY',
     description: 'A social platform where users can share posts, engage with others through reactions, and interact within a moderated community.',
-    imageUrl: 'public/images/3.jpg',
+    imageUrl: '/portfolio/images/3.jpg',
     tech: ['C#', 'ASP.NET', 'SQLite', 'Node.js', 'JavaScript', 'CSS', 'HTML', 'REST API'],
     github: 'https://github.com/demjrhan/FLY'
 },
@@ -34,7 +34,7 @@ const projects = [{
         category: 'DATABASE DESIGN',
         title: 'BOXING CLUB',
         description: 'Relational database design using Microsoft SQL Server and Oracle SQL. Includes complex stored procedures and triggers to enforce business logic, automate workflows, and ensure data integrity.',
-        imageUrl: 'public/images/4.jpg',
+        imageUrl: '/portfolio/images/4.jpg',
         tech: ['Microsoft SQL Server', 'Oracle SQL'],
         github: 'https://github.com/demjrhan/BOXING-CLUB'
     }];
@@ -77,14 +77,14 @@ export default function Projects() {
                             className="w-9 h-9 rounded-full backdrop-blur-md bg-white/70 border border-gray-200 shadow-md hover:bg-white hover:scale-105 transition-all flex items-center justify-center"
                             aria-label="Scroll Left"
                         >
-                            <ChevronLeft className="w-5 h-5 text-gray-700" />
+                            <ChevronLeft className="w-5 h-5 text-gray-700"/>
                         </button>
                         <button
                             onClick={() => scroll('right')}
                             className="w-9 h-9 rounded-full backdrop-blur-md bg-white/70 border border-gray-200 shadow-md hover:bg-white hover:scale-105 transition-all flex items-center justify-center"
                             aria-label="Scroll Right"
                         >
-                            <ChevronRight className="w-5 h-5 text-gray-700" />
+                            <ChevronRight className="w-5 h-5 text-gray-700"/>
                         </button>
                     </div>
                 </div>
@@ -104,9 +104,9 @@ export default function Projects() {
                                     flex-none w-75 sm:w-72 md:w-80 lg:w-96 bg-white rounded-xl cursor-pointer
                                     transition-transform duration-200
                                     hover:shadow-[0_4px_10px_rgba(111,78,55,0.25)]
-                                    hover:scale-102
+                                    md:hover:scale-102
                                     filter
-                                    ${isOther ? 'blur-sm' : 'blur-none'}
+                                    ${isOther ? 'md:blur-sm' : 'blur-none'}
                                 `}
                             >
                                 <img

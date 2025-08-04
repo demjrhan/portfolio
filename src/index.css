@@ -24,26 +24,17 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-@keyframes slide {
-  from { transform: translateX(0%); }
-  to { transform: translateX(-50%); }
-}
 
-.animate-slide {
-  animation: slide 20s linear infinite;
-}
-
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-.animate-fadeSlide {
-  animation: fadeSlide 0.3s ease-out forwards;
+.marquee {
+  display: inline-block;
+  animation: scroll 40s linear infinite;
 }
