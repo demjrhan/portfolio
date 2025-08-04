@@ -27,7 +27,16 @@ const projects = [{
     imageUrl: 'https://i.pinimg.com/736x/56/35/7d/56357d778607f48fa6139a8acbfbd191.jpg',
     tech: ['C#', 'ASP.NET', 'SQLite', 'Node.js', 'JavaScript', 'CSS', 'HTML', 'REST API'],
     github: 'https://github.com/demjrhan/FLY'
-}];
+},
+    {
+        id: 4,
+        category: 'DATABASE DESIGN',
+        title: 'BOXING CLUB',
+        description: 'Relational database design using Microsoft SQL Server and Oracle SQL. Includes complex stored procedures and triggers to enforce business logic, automate workflows, and ensure data integrity.',
+        imageUrl: 'https://i.pinimg.com/1200x/9b/8d/56/9b8d56e893b22c4ddf5141a466c1e71f.jpg',
+        tech: ['Microsoft SQL Server', 'Oracle SQL'],
+        github: 'https://github.com/demjrhan/BOXING-CLUB'
+    }];
 
 export default function Projects() {
     const [hoveredId, setHoveredId] = useState(null);
@@ -54,6 +63,11 @@ export default function Projects() {
         <section id="projects" className="relative h-max  pb-5 items-center">
             <BackgroundBlobs/>
             <SocialLinks/>
+            <div className="absolute top-10 right-4 text-sm px-1 py-1 z-10 font-semibold text-black">
+                Thumbnails do not reflect the actual projects.
+            </div>
+
+
             <div className="ml-auto pl-6 w-full">
                 <div className="flex items-center gap-5 mb-5 pl-2">
                     <h2 className="text-5xl font-extrabold ">Projects</h2>
@@ -111,6 +125,7 @@ export default function Projects() {
                                         {project.description}
                                     </p>
                                 </div>
+
                             </article>
                         );
                     })}

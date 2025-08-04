@@ -9,7 +9,7 @@ export default function SocialLinks() {
             <div className="absolute top-0 left-0 w-screen bg-black text-white py-1 shadow-lg">
                 <div className=" mx-auto px-4 flex items-center gap-6">
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/demjrhan"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 transition-all duration-300 ease-in-out hover:animate-pulse"
@@ -21,7 +21,7 @@ export default function SocialLinks() {
                     </a>
 
                     <a
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://linkedin.com/in/demjrhan"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 transition-all duration-300 ease-in-out hover:animate-pulse"
