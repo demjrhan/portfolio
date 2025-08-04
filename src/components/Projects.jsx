@@ -2,6 +2,7 @@ import React, {useRef, useState} from 'react';
 import TechStack from "./TechStack.jsx";
 import BackgroundBlobs from "./BackgroundGlobes.jsx";
 import SocialLinks from "./SocialLinks.jsx";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const projects = [{
     id: 1,
@@ -67,24 +68,23 @@ export default function Projects() {
                 Thumbnails do not reflect the actual projects.
             </div>
 
-
-            <div className="ml-auto pl-6 w-full">
+            <div className="ml-auto pl-6 pt-8 w-full">
                 <div className="flex items-center gap-5 mb-5 pl-2">
-                    <h2 className="text-5xl font-extrabold ">Projects</h2>
+                    <h2 className="text-5xl font-extrabold">Projects</h2>
                     <div className="flex space-x-2 pt-1">
                         <button
                             onClick={() => scroll('left')}
-                            className="w-8 h-8 bg-white rounded-full shadow hover:shadow-md transition"
+                            className="w-9 h-9 rounded-full backdrop-blur-md bg-white/70 border border-gray-200 shadow-md hover:bg-white hover:scale-105 transition-all flex items-center justify-center"
                             aria-label="Scroll Left"
                         >
-                            ◀
+                            <ChevronLeft className="w-5 h-5 text-gray-700" />
                         </button>
                         <button
                             onClick={() => scroll('right')}
-                            className="w-8 h-8 bg-white rounded-full shadow hover:shadow-md transition"
+                            className="w-9 h-9 rounded-full backdrop-blur-md bg-white/70 border border-gray-200 shadow-md hover:bg-white hover:scale-105 transition-all flex items-center justify-center"
                             aria-label="Scroll Right"
                         >
-                            ▶
+                            <ChevronRight className="w-5 h-5 text-gray-700" />
                         </button>
                     </div>
                 </div>
