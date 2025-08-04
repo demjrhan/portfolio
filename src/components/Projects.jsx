@@ -9,7 +9,7 @@ const projects = [{
     category: 'QUALITY ASSURANCE',
     title: 'QA Practice Suite',
     description: 'A hands-on QA portfolio built to properly document my learning journey. After not maintaining past repositories, I’ve now started structuring my work professionally. Currently focused on manual testing with Jira, updating the repository daily with test cases, bug reports, and progress. Automation and API testing will follow.',
-    imageUrl: 'https://i.pinimg.com/1200x/4b/cd/c7/4bcdc7631b0f4b9e31cd5efa3334c999.jpg',
+    imageUrl: '/images/1.jpg',
     tech: ['Java', 'Jira', 'Postman', 'Selenium', 'Swagger'],
     github: 'https://github.com/demjrhan/QA'
 }, {
@@ -17,7 +17,7 @@ const projects = [{
     category: 'MEDIA CONTENT STREAMING',
     title: 'Vaultive',
     description: 'A unified platform that brings together movies, documentaries, and short films from multiple streaming services, making it easy for users to discover and watch content in one place.',
-    imageUrl: 'https://i.pinimg.com/736x/f1/47/59/f14759a13a81007765f43131226aa3fc.jpg',
+    imageUrl: '/images/2.jpg',
     tech: ['C#', 'ASP.NET', 'SQLite', 'Entity Framework', 'HTML', 'CSS', 'JavaScript', 'REST API'],
     github: 'https://github.com/demjrhan/Vaultive'
 }, {
@@ -25,7 +25,7 @@ const projects = [{
     category: 'SOCIAL MEDIA',
     title: 'FLY',
     description: 'A social platform where users can share posts, engage with others through reactions, and interact within a moderated community.',
-    imageUrl: 'https://i.pinimg.com/736x/56/35/7d/56357d778607f48fa6139a8acbfbd191.jpg',
+    imageUrl: '/images/3.jpg',
     tech: ['C#', 'ASP.NET', 'SQLite', 'Node.js', 'JavaScript', 'CSS', 'HTML', 'REST API'],
     github: 'https://github.com/demjrhan/FLY'
 },
@@ -34,7 +34,7 @@ const projects = [{
         category: 'DATABASE DESIGN',
         title: 'BOXING CLUB',
         description: 'Relational database design using Microsoft SQL Server and Oracle SQL. Includes complex stored procedures and triggers to enforce business logic, automate workflows, and ensure data integrity.',
-        imageUrl: 'https://i.pinimg.com/1200x/9b/8d/56/9b8d56e893b22c4ddf5141a466c1e71f.jpg',
+        imageUrl: '/images/4.jpg',
         tech: ['Microsoft SQL Server', 'Oracle SQL'],
         github: 'https://github.com/demjrhan/BOXING-CLUB'
     }];
