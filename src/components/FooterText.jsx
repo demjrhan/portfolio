@@ -17,10 +17,17 @@ export default function RotatingFooterText() {
     const containerRef = useRef(null);
     const [width, setWidth] = useState(0);
 
-    useEffect(() => {
+    const updateWidth = () => {
         if (containerRef.current) {
             setWidth(containerRef.current.scrollWidth / 2);
         }
+    };
+
+    useEffect(() => {
+        updateWidth();
+        window.addEventListener('resize', updateWidth);
+
+        return () => window.removeEventListener('resize', updateWidth);
     }, []);
 
     const content = texts.join(' \u00A0\u00A0\u00A0 ') + ' \u00A0\u00A0\u00A0 ';

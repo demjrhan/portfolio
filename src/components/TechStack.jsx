@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 export default function TechStack() {
     const techs = [
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", alt: "Java", size: 45 },
@@ -23,27 +21,26 @@ export default function TechStack() {
     ];
 
     return (
-        <div id="techstack" className="relative w-full py-8 px-8 overflow-hidden">
+        <div id="techstack" className="relative w-full py-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div className="absolute inset-0 bg-fixed bg-bottom bg-transparent"></div>
 
-            <div
-                className="absolute inset-0 bg-fixed bg-bottom bg-transparent"
-            ></div>
-
-            <div className="relative grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 w-full">
+            <div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 w-full">
                 {techs.map((tech, index) => (
                     <div
                         key={index}
-                        className="flex items-center gap-3 px-4 py-2 bg-gradient-to-br from-gray-50 to-gray-100 shadow-md rounded-lg hover:shadow-lg transition-all w-full"
+                        className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 bg-gradient-to-br from-gray-50 to-gray-100 shadow-md rounded-lg hover:shadow-lg transition-all"
                     >
-                        <div className="flex-shrink-0 p-2 bg-white rounded-md shadow-sm">
+                        <div className="flex-shrink-0 p-1.5 sm:p-2 bg-white rounded-md shadow-sm">
                             <img
                                 src={tech.src}
                                 alt={tech.alt}
-                                style={{ width: tech.size, height: tech.size }}
+                                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
                             />
-
                         </div>
-                        <p className="text-sm font-medium text-gray-800">{tech.alt}</p>
+
+                        <p className="text-xs sm:text-sm md:text-base font-medium text-gray-800">
+                            {tech.alt}
+                        </p>
                     </div>
                 ))}
             </div>
