@@ -38,3 +38,27 @@ body {
   display: inline-block;
   animation: scroll 40s linear infinite;
 }
+
+@keyframes blobMove {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(20px, -30px) scale(1.05); }
+  50% { transform: translate(-15px, 25px) scale(0.95); }
+  75% { transform: translate(30px, 10px) scale(1.02); }
+}
+
+.blob {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+  animation: blobMove 20s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}
