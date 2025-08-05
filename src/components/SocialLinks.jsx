@@ -33,7 +33,7 @@ export default function SocialLinks() {
                     </a>
 
                     <a
-                        href="/portfolio/files/resume.pdf"
+                        href="/portfolio/files/Demirhan_Yalcin_Resume.pdf"
                         download
                         className="flex items-center gap-1 transition-all duration-300 ease-in-out hover:animate-pulse"
                     >
