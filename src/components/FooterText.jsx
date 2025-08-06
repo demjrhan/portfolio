@@ -11,6 +11,7 @@ const texts = [
     'DELIVER',
     '✸',
     'LET\'S BUILD SOMETHING GREAT',
+    '✸',
 ];
 
 export default function RotatingFooterText() {
