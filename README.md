@@ -4,6 +4,6 @@
 
 ## Screenshots from portfolio
 
-<p align="center">
+<a href="https://github.com/demjrhan/portfolio" target="_blank">
     <img src="https://github.com/demjrhan/portfolio/blob/2.0/public/gifs/portfolio.gif" alt="Home Page" width="1000"/>
-</p>
+</a>
