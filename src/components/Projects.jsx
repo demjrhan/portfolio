@@ -7,8 +7,8 @@ import {ChevronLeft, ChevronRight} from "lucide-react";
 const projects = [{
     id: 1,
     category: 'QUALITY ASSURANCE',
-    title: 'QA Practice Suite',
-    description: 'A hands-on QA portfolio built to properly document my learning journey. After not maintaining past repositories, I’ve now started structuring my work professionally. Currently focused on manual testing with Jira, updating the repository daily with test cases, bug reports, and progress. Automation and API testing will follow.',
+    title: 'Quality Assurance Portfolio',
+    description: 'Central QA Portfolio Hub combining manual and automation testing projects. Includes Jira-based test cases, bug reports, and progress logs with growing automation coverage in Java, Selenium, TestNG, and Postman.',
     imageUrl: '/portfolio/images/1.jpg',
     tech: ['Java', 'Jira', 'Postman', 'Selenium', 'Swagger'],
     github: 'https://github.com/demjrhan/QA'
