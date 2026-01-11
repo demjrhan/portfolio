@@ -15,10 +15,9 @@ export default function AboutMe() {
 
                 <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed">
                     I’m
-                    <span className="text-transparent bg-clip-text font-semibold bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 [text-shadow:1px_1px_2px_rgba(255,215,0,0.5)]"> Demirhan Yalcin</span>
-                    , a final-year Computer Science student at PJATK in Warsaw.
-                    I’m passionate about <span className="text-white">Quality Assurance</span>: from manual testing and bug reporting to learning test automation with tools like Selenium and Jira.
-                    Currently, I’m building a QA portfolio by testing real apps and documenting the full process.
+                    <span className="text-transparent bg-clip-text font-semibold bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 [text-shadow:1px_1px_2px_rgba(255,215,0,0.5)]"> Demirhan Yalcin</span>,
+                    a final-year Computer Science student at PJATK in Warsaw, focused on Quality Assurance engineering.
+                    I work across manual, API, and automation testing, building reliable test coverage using Selenium and Playwright, and tracking defects and test execution in Jira. My goal is simple: catch real issues early and help teams ship stable, high-quality software.
                 </p>
 
                 <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-400 italic">

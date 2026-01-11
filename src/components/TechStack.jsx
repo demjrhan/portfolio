@@ -14,6 +14,7 @@ export default function TechStack() {
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", alt: "GitHub", size: 38 },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", alt: "Postman", size: 38 },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg", alt: "Selenium", size: 38 },
+        { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg", alt: "Playwright", size: 38 },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg", alt: "Jira", size: 38 },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg", alt: "Swagger", size: 38 },
         { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original-wordmark.svg", alt: "Maven", size: 38 }
