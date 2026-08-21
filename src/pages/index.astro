@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HorizontalStrip from '../components/HorizontalStrip.astro';
+import Screen from '../components/Screen.astro';
+import { desktopSegments, screenById } from '../data/screens';
+---
+
+<BaseLayout>
+  {
+    desktopSegments.map((segment) =>
+      segment.type === 'horizontal' ? (
+        <HorizontalStrip screens={segment.ids.map(screenById)} />
+      ) : (
+        segment.ids.map((id) => <Screen screen={screenById(id)} />)
+      ),
+    )
+  }
+</BaseLayout>

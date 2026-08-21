@@ -1,0 +1,65 @@
+---
+import Screen from './Screen.astro';
+import type { Screen as ScreenData } from '../data/screens';
+
+interface Props {
+  screens: ScreenData[];
+}
+
+const { screens } = Astro.props;
+---
+
+<div
+  class="horizontal-scene"
+  data-horizontal-scene
+  style={`--panel-count: ${screens.length}`}
+>
+  <div class="horizontal-scene__pin">
+    <div class="horizontal-scene__track" data-horizontal-track>
+      {screens.map((screen) => <Screen screen={screen} />)}
+    </div>
+  </div>
+</div>
+
+<style>
+  .horizontal-scene,
+  .horizontal-scene__pin,
+  .horizontal-scene__track {
+    display: contents;
+  }
+
+  @media (min-width: 1280px) and (pointer: fine) {
+    @media (prefers-reduced-motion: no-preference) {
+      .horizontal-scene {
+        display: block;
+        height: calc(var(--panel-count) * 100svh);
+      }
+
+      .horizontal-scene__pin {
+        display: block;
+        position: sticky;
+        top: 0;
+        height: 100svh;
+        overflow: hidden;
+      }
+
+      .horizontal-scene__track {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        will-change: transform;
+      }
+
+      .horizontal-scene__track > :global(section) {
+        flex: 0 0 100%;
+        min-height: 100%;
+      }
+    }
+  }
+</style>
+
+<script>
+  import { bindHorizontalScenes } from '../scripts/bind-horizontal-scene';
+
+  bindHorizontalScenes();
+</script>

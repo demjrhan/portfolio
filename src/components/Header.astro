@@ -1,0 +1,20 @@
+---
+import { site } from '../data/site';
+import { withBase } from '../lib/paths';
+---
+
+<header
+  class="bg-accent sticky top-0 z-40 pt-[env(safe-area-inset-top)]"
+>
+  <div
+    class="mx-auto flex h-11 max-w-6xl items-center px-4 min-[768px]:h-12 min-[768px]:px-6 min-[1280px]:px-8"
+  >
+    <a
+      href={withBase('/')}
+      class="text-paper inline-flex min-h-11 items-center text-sm font-medium tracking-wide min-[768px]:text-base"
+    >
+      {site.shortName}
+      <span class="sr-only">{site.name}</span>
+    </a>
+  </div>
+</header>

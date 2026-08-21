@@ -1,0 +1,15 @@
+---
+description: Treat phone, iPad, and desktop as first-class layouts — never patch later
+alwaysApply: true
+---
+
+# Viewports
+
+Every layout, component, and interaction must work on phone, iPad, and desktop in the same pass. Do not ship a desktop design and retrofit smaller screens.
+
+- Design from a real phone width (~390px), an iPad portrait/landscape band (~768–1024px), and desktop (~1280px+) before considering the work done.
+- iPad is its own layout, not “mobile but wider” and not a shrunk desktop.
+- Touch is the default on phone and iPad: hit targets at least 44px, no hover-only actions, no hover-only content. Hover may enhance desktop; it must not be required.
+- Respect safe areas (`env(safe-area-inset-*)`), notch, and home indicator. Prevent horizontal overflow.
+- Prefer CSS (flex, grid, container queries, fluid type/spacing) over JS for layout. Use `pointer: coarse | fine` when hover vs tap should differ.
+- Navigation, typography, spacing, and motion must feel native on each surface — not a scaled desktop page.

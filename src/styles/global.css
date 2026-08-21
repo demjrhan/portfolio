@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #000000;
+  --color-dark-gray: #2c2c2c;
+  --color-paper: #ffffff;
+  --color-yellow: #fdff00;
+  --color-accent: #ff007f;
+
+  --spacing-header: 2.75rem;
+  --spacing-footer: 2.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (min-width: 1280px) and (pointer: fine) {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-snap-type: none;
+    }
+  }
+}
+
+body {
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-paper);
+  outline-offset: 3px;
+}

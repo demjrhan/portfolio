@@ -1,0 +1,15 @@
+---
+description: Keep the codebase easy to extend without rewriting the structure
+alwaysApply: true
+---
+
+# Extensibility
+
+New sections, pages, and content should slot in. Do not couple the whole site to one page or one component tree.
+
+- Put copy, links, and project data in `src/data` (or equivalent modules). Components render data; they do not own it.
+- Keep the document shell (layout, header, footer) separate from page sections. Add a section by composing a component, not by editing the shell.
+- One component, one job. Share tokens (type, color, space) instead of copying magic numbers.
+- Prefer small, named pieces over a few large files that every change has to touch.
+- Shared paths, breakpoints, and motion live in one place so a change there updates the site.
+- If a change would require rewriting layout, routing, or several unrelated files, stop and extract first.

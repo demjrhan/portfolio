@@ -1,0 +1,23 @@
+---
+import type { Screen } from '../data/screens';
+
+interface Props {
+  screen: Screen;
+}
+
+const { screen } = Astro.props;
+
+const tones: Record<Screen['tone'], string> = {
+  black: 'bg-ink',
+  'dark-gray': 'bg-dark-gray',
+  white: 'bg-paper',
+  yellow: 'bg-yellow',
+};
+---
+
+<section
+  id={screen.id}
+  class:list={['min-h-svh w-full snap-start', tones[screen.tone]]}
+  aria-label={screen.tone}
+>
+</section>
