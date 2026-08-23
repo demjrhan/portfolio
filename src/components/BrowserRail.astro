@@ -13,14 +13,15 @@ import BrowserWindow from './BrowserWindow.astro';
     display: none;
   }
 
-  /* The rail keeps the window pinned until page 2 has finished leaving, by
-     which point the follower transform has carried it off screen. Offsets
-     mirror the landing padding and the grid ratio in EditorialGrid. */
+  /* The rail is only as tall as page 1 + page 2, minus the page 2 bottom
+     inset, so the sticky window stops above that edge. Offsets mirror
+     EditorialGrid. */
   @media (min-width: 1280px) {
     .browser-rail {
       --rail-pad-x: 7rem;
       --rail-top: 6rem;
       --frame-inset: 2.5rem;
+      --rail-bottom: calc(3.5rem + var(--frame-inset));
       --primary-share: 0.6;
 
       display: block;
@@ -29,7 +30,7 @@ import BrowserWindow from './BrowserWindow.astro';
       right: 0;
       left: 0;
       z-index: 20;
-      height: calc(100% - 3rem);
+      height: calc(100% - 100svh - var(--rail-bottom));
       pointer-events: none;
     }
 

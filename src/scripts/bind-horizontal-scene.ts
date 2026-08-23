@@ -1,6 +1,68 @@
 export const DESKTOP_HORIZONTAL_QUERY =
   '(min-width: 1280px) and (pointer: fine) and (prefers-reduced-motion: no-preference)';
 
+function releaseFollower(follower: HTMLElement): void {
+  delete follower.dataset.frozen;
+  delete follower.dataset.frozenTop;
+  delete follower.dataset.frozenLeft;
+  follower.style.position = '';
+  follower.style.top = '';
+  follower.style.left = '';
+  follower.style.marginLeft = '';
+  follower.style.transform = '';
+}
+
+function remToPx(value: string): number {
+  const n = Number.parseFloat(value);
+
+  if (Number.isNaN(n)) {
+    return 0;
+  }
+
+  if (value.includes('rem')) {
+    return n * Number.parseFloat(getComputedStyle(document.documentElement).fontSize);
+  }
+
+  return n;
+}
+
+function holdFollower(follower: HTMLElement, transform: string): void {
+  const rail = follower.parentElement;
+  const frame = document.querySelector<HTMLElement>('#dark-gray .editorial-frame');
+
+  if (!rail || !frame) {
+    return;
+  }
+
+  // Keep the same 2.5rem inset as the page 1 top gap, measured from page 2's
+  // frame — not the viewport — so the window cannot sit on the rounded bar.
+  const tokens = getComputedStyle(rail);
+  const inset = remToPx(tokens.getPropertyValue('--frame-inset')) || 40;
+  const railTop = remToPx(tokens.getPropertyValue('--rail-top')) || 96;
+  const frameBox = frame.getBoundingClientRect();
+  const maxBottom = frameBox.bottom - inset;
+  const naturalBottom = railTop + follower.offsetHeight;
+  const wouldOverflow = frameBox.bottom > 0 && maxBottom < naturalBottom;
+
+  if (!wouldOverflow) {
+    releaseFollower(follower);
+    follower.style.transform = transform;
+    return;
+  }
+
+  if (follower.dataset.frozen !== 'true') {
+    follower.style.transform = '';
+    follower.dataset.frozen = 'true';
+    follower.dataset.frozenLeft = String(follower.getBoundingClientRect().left);
+  }
+
+  follower.style.position = 'fixed';
+  follower.style.top = `${maxBottom - follower.offsetHeight}px`;
+  follower.style.left = `${follower.dataset.frozenLeft}px`;
+  follower.style.marginLeft = '0';
+  follower.style.transform = transform;
+}
+
 export function bindHorizontalScenes(): void {
   if (document.documentElement.dataset.horizontalBound === 'true') {
     return;
@@ -20,15 +82,15 @@ export function bindHorizontalScenes(): void {
       }
 
       // Followers sit beside the scene and travel with the track, so they leave
-      // the viewport together with the panel they belong to.
+      // sideways with page 2 instead of rising into page 3.
       const followers = scene.parentElement
         ? Array.from(scene.parentElement.querySelectorAll<HTMLElement>('[data-horizontal-follower]'))
         : [];
-      const shifted = [track, ...followers];
 
       if (!media.matches) {
-        for (const element of shifted) {
-          element.style.transform = '';
+        track.style.transform = '';
+        for (const follower of followers) {
+          releaseFollower(follower);
         }
 
         continue;
@@ -37,8 +99,9 @@ export function bindHorizontalScenes(): void {
       const range = scene.offsetHeight - window.innerHeight;
 
       if (range <= 0) {
-        for (const element of shifted) {
-          element.style.transform = '';
+        track.style.transform = '';
+        for (const follower of followers) {
+          releaseFollower(follower);
         }
 
         continue;
@@ -47,9 +110,10 @@ export function bindHorizontalScenes(): void {
       const progress = Math.min(1, Math.max(0, -scene.getBoundingClientRect().top / range));
       const distance = track.scrollWidth - scene.clientWidth;
       const transform = `translate3d(${-progress * distance}px, 0, 0)`;
+      track.style.transform = transform;
 
-      for (const element of shifted) {
-        element.style.transform = transform;
+      for (const follower of followers) {
+        holdFollower(follower, transform);
       }
     }
   };
