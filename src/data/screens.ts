@@ -1,13 +1,16 @@
-export type ScreenTone = 'black' | 'dark-gray' | 'white' | 'yellow';
+import type { GradientVariant } from './gradients';
+
+export type ScreenTone = 'dark-gray' | 'white' | 'yellow';
 
 export interface Screen {
   id: string;
   tone: ScreenTone;
+  gradient?: GradientVariant;
 }
 
 export const screens: Screen[] = [
-  { id: 'black', tone: 'black' },
-  { id: 'dark-gray', tone: 'dark-gray' },
+  { id: 'landing', tone: 'white' },
+  { id: 'dark-gray', tone: 'white', gradient: 'orange' },
   { id: 'white', tone: 'white' },
   { id: 'yellow', tone: 'yellow' },
 ];
@@ -17,7 +20,7 @@ export type DesktopSegment =
   | { type: 'horizontal'; ids: string[] };
 
 export const desktopSegments: DesktopSegment[] = [
-  { type: 'vertical', ids: ['black'] },
+  { type: 'vertical', ids: ['landing'] },
   { type: 'horizontal', ids: ['dark-gray', 'white'] },
   { type: 'vertical', ids: ['yellow'] },
 ];

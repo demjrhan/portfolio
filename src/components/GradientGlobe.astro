@@ -1,0 +1,102 @@
+---
+---
+
+<div class="gradient-globe" aria-hidden="true">
+  <div class="gradient-globe__sphere"></div>
+</div>
+
+<style>
+  .gradient-globe {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 12%,
+      rgb(0 0 0 / 0.55) 26%,
+      transparent 44%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 12%,
+      rgb(0 0 0 / 0.55) 26%,
+      transparent 44%
+    );
+  }
+
+  .gradient-globe__sphere {
+    --globe-size: 140vw;
+    --globe-shift-x: -18%;
+    --globe-shift-y: -72%;
+    --globe-blur: 52px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--globe-size);
+    aspect-ratio: 1;
+    translate: var(--globe-shift-x) var(--globe-shift-y);
+    border-radius: 50%;
+    filter: blur(var(--globe-blur));
+    opacity: 0.92;
+    background:
+      radial-gradient(
+        circle at 50% 70%,
+        var(--color-accent) 0%,
+        transparent 38%
+      ),
+      radial-gradient(
+        circle at 18% 78%,
+        color-mix(in srgb, var(--color-coral) 72%, white) 0%,
+        transparent 34%
+      ),
+      radial-gradient(
+        circle at 82% 78%,
+        color-mix(in srgb, var(--color-purple) 88%, white) 0%,
+        transparent 34%
+      ),
+      radial-gradient(
+        circle at 50% 86%,
+        color-mix(in srgb, var(--color-accent) 28%, white) 0%,
+        transparent 52%
+      );
+  }
+
+  @media (min-width: 768px) {
+    .gradient-globe {
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 10%,
+        rgb(0 0 0 / 0.5) 22%,
+        transparent 38%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 10%,
+        rgb(0 0 0 / 0.5) 22%,
+        transparent 38%
+      );
+    }
+
+    .gradient-globe__sphere {
+      --globe-size: min(120vw, 64rem);
+      --globe-shift-x: -16%;
+      --globe-shift-y: -76%;
+      --globe-blur: 64px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .gradient-globe__sphere {
+      --globe-size: min(110vw, 72rem);
+      --globe-shift-x: -14%;
+      --globe-shift-y: -78%;
+      --globe-blur: 80px;
+    }
+  }
+</style>

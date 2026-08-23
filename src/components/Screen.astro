@@ -1,4 +1,5 @@
 ---
+import GradientBackground from './GradientBackground.astro';
 import type { Screen } from '../data/screens';
 
 interface Props {
@@ -8,7 +9,6 @@ interface Props {
 const { screen } = Astro.props;
 
 const tones: Record<Screen['tone'], string> = {
-  black: 'bg-ink',
   'dark-gray': 'bg-dark-gray',
   white: 'bg-paper',
   yellow: 'bg-yellow',
@@ -17,7 +17,12 @@ const tones: Record<Screen['tone'], string> = {
 
 <section
   id={screen.id}
-  class:list={['min-h-svh w-full snap-start', tones[screen.tone]]}
-  aria-label={screen.tone}
+  class:list={[
+    'relative isolate min-h-svh w-full snap-start overflow-hidden',
+    screen.gradient ? null : tones[screen.tone],
+  ]}
+  aria-label={screen.id}
 >
+  {screen.gradient && <GradientBackground variant={screen.gradient} />}
+  <slot />
 </section>

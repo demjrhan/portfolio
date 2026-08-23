@@ -1,13 +1,21 @@
 @import 'tailwindcss';
+@import '@fontsource/aclonica/400.css';
 
 @theme {
+  --font-display: 'Aclonica', ui-sans-serif, system-ui, sans-serif;
+
   --color-ink: #000000;
   --color-dark-gray: #2c2c2c;
   --color-paper: #ffffff;
   --color-yellow: #fdff00;
+  --color-coral: #f87067;
   --color-accent: #ff007f;
+  --color-purple: #6202ee;
+  --color-mist: #a9c5d0;
+  --color-warm-yellow: #ffc451;
+  --color-sunset: #ff7828;
+  --color-muted-blue: #76afc9;
 
-  --spacing-header: 2.75rem;
   --spacing-footer: 2.5rem;
 }
 
@@ -33,9 +41,11 @@ html {
 body {
   min-height: 100svh;
   overflow-x: hidden;
+  background: var(--color-paper);
+  color: var(--color-ink);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-paper);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }

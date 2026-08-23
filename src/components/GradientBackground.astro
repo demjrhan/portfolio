@@ -1,0 +1,55 @@
+---
+import { gradientVariants, type GradientVariant } from '../data/gradients';
+
+interface Props {
+  variant: GradientVariant;
+}
+
+const { variant } = Astro.props;
+const config = gradientVariants[variant];
+---
+
+<div
+  class="gradient-bg"
+  style={`--gb-base: ${config.base}`}
+  aria-hidden="true"
+>
+  {
+    config.fields.map((field) => (
+      <div
+        class="gradient-bg__field"
+        style={`--gb-color: ${field.color}; --gb-x: ${field.x}; --gb-y: ${field.y}; --gb-w: ${field.w}; --gb-h: ${field.h}; --gb-blur: ${field.blur}; --gb-opacity: ${field.opacity}`}
+      />
+    ))
+  }
+</div>
+
+<style>
+  .gradient-bg {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: var(--gb-base);
+  }
+
+  .gradient-bg__field {
+    pointer-events: none;
+    position: absolute;
+    left: var(--gb-x);
+    top: var(--gb-y);
+    width: var(--gb-w);
+    height: var(--gb-h);
+    translate: -50% -50%;
+    border-radius: 50%;
+    opacity: var(--gb-opacity);
+    filter: blur(var(--gb-blur));
+    background: radial-gradient(
+      ellipse at center,
+      var(--gb-color) 0%,
+      color-mix(in srgb, var(--gb-color) 58%, transparent) 38%,
+      transparent 70%
+    );
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HorizontalStrip from '../components/HorizontalStrip.astro';
+import Landing from '../components/Landing.astro';
 import Screen from '../components/Screen.astro';
 import { desktopSegments, screenById } from '../data/screens';
 ---
@@ -11,7 +12,7 @@ import { desktopSegments, screenById } from '../data/screens';
       segment.type === 'horizontal' ? (
         <HorizontalStrip screens={segment.ids.map(screenById)} />
       ) : (
-        segment.ids.map((id) => <Screen screen={screenById(id)} />)
+        segment.ids.map((id) => (id === 'landing' ? <Landing /> : <Screen screen={screenById(id)} />))
       ),
     )
   }
