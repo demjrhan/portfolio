@@ -1,0 +1,89 @@
+---
+---
+
+<div class="browser-window" aria-hidden="true">
+  <div class="browser-window__chrome">
+    <span class="browser-window__dot browser-window__dot--close"></span>
+    <span class="browser-window__dot browser-window__dot--minimize"></span>
+    <span class="browser-window__dot browser-window__dot--zoom"></span>
+  </div>
+
+  <div class="browser-window__viewport"></div>
+</div>
+
+<style>
+  .browser-window {
+    --browser-line: 1px solid var(--color-ink);
+    --browser-radius: 1rem;
+    --browser-dot: 0.5rem;
+    --browser-red: #ff5f57;
+    --browser-yellow: #febc2e;
+    --browser-green: #28c840;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: var(--browser-line);
+    border-radius: var(--browser-radius);
+    background: var(--color-paper);
+  }
+
+  .browser-window__chrome {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.5rem;
+    border-bottom: var(--browser-line);
+  }
+
+  .browser-window__dot {
+    width: var(--browser-dot);
+    height: var(--browser-dot);
+    border-radius: 50%;
+  }
+
+  .browser-window__dot--close {
+    background: var(--browser-red);
+  }
+
+  .browser-window__dot--minimize {
+    background: var(--browser-yellow);
+  }
+
+  .browser-window__dot--zoom {
+    background: var(--browser-green);
+  }
+
+  .browser-window__viewport {
+    flex: 1 1 auto;
+    min-height: 0;
+    aspect-ratio: var(--browser-aspect, 16 / 9);
+    background: var(--color-paper);
+  }
+
+  @media (min-width: 768px) {
+    .browser-window {
+      --browser-radius: 1.25rem;
+      --browser-dot: 0.6rem;
+    }
+
+    .browser-window__chrome {
+      gap: 0.4rem;
+      padding: 0.55rem 0.7rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .browser-window {
+      --browser-radius: 1.5rem;
+      --browser-dot: 0.7rem;
+    }
+
+    .browser-window__chrome {
+      gap: 0.5rem;
+      padding: 0.7rem 0.9rem;
+    }
+  }
+</style>

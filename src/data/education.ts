@@ -46,7 +46,7 @@ export const mockExperiences: readonly School[] = [
         href: 'https://codemify.com/',
       },
     ],
-    dates: 'Sep 2025 – Mar 2026 · 7 mos',
+    dates: 'Sep 2025 – Mar 2026',
     duties: [
       'Mentored Junior QA testers in manual and automation testing, covering test case design, defect reporting, and testing fundamentals.',
       'Reviewed manual and automated test cases, providing clear, actionable feedback to improve coverage, clarity, and reproducibility.',
@@ -68,7 +68,7 @@ export const mockExperiences: readonly School[] = [
         href: 'https://www.linkedin.com/company/samorzadpjatk/posts/?feedView=all',
       },
     ],
-    dates: 'Feb 2022 – Feb 2026 · 4 yrs 1 mo',
+    dates: 'Feb 2022 – Feb 2026',
     description:
       'As a member of the International Committee at PJATK, I regularly take part in university events that aim to make student life more engaging and social. I help erasmus students to adapt Warsaw and I attend events, connect with other students, and share suggestions for future activities based on what students enjoy. This role helps me stay involved in the campus community and contribute to a positive and welcoming environment.',
   },
