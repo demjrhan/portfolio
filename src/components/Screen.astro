@@ -18,7 +18,7 @@ const tones: Record<Screen['tone'], string> = {
 <section
   id={screen.id}
   class:list={[
-    'relative isolate flex min-h-svh w-full flex-col snap-start overflow-hidden',
+    'relative isolate flex min-h-svh w-full flex-col snap-start overflow-x-hidden max-[1279px]:h-auto min-[1280px]:overflow-hidden',
     screen.gradient ? null : tones[screen.tone],
   ]}
   aria-label={screen.id}

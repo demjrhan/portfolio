@@ -107,10 +107,55 @@ const { reverted = false, flushTop = false } = Astro.props;
     border-bottom: var(--frame-line);
   }
 
+  @media (max-width: 1279px) {
+    .editorial-frame {
+      overflow: visible;
+      border-top: var(--frame-line);
+      border-right: var(--frame-line);
+      border-bottom: 0;
+      border-left: var(--frame-line);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .editorial-frame--reverted,
+    .editorial-frame--flush-top {
+      border-top: 0;
+      border-right: var(--frame-line);
+      border-bottom: var(--frame-line);
+      border-left: var(--frame-line);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: var(--frame-radius);
+      border-bottom-right-radius: var(--frame-radius);
+    }
+
+    .editorial-frame__primary,
+    .editorial-frame__stack-top,
+    .editorial-frame__stack-bottom,
+    .editorial-frame--reverted .editorial-frame__primary,
+    .editorial-frame--reverted .editorial-frame__stack-bottom,
+    .editorial-frame--flush-top .editorial-frame__primary,
+    .editorial-frame--flush-top .editorial-frame__stack-top {
+      border-bottom: none;
+    }
+
+    .editorial-frame__primary:empty {
+      display: none;
+    }
+  }
+
   @media (min-width: 768px) {
     .editorial-frame {
       --frame-pad: 2rem;
       --frame-radius: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .editorial-frame {
+      --frame-pad: 2.5rem;
+      --frame-radius: 2rem;
       grid-template-columns: 3fr 2fr;
       grid-template-rows: auto minmax(0, 1fr);
       grid-template-areas:
@@ -137,13 +182,6 @@ const { reverted = false, flushTop = false } = Astro.props;
 
     .editorial-frame--reverted .editorial-frame__stack-bottom {
       border-bottom: none;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .editorial-frame {
-      --frame-pad: 2.5rem;
-      --frame-radius: 2rem;
     }
   }
 </style>

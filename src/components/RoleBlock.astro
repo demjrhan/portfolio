@@ -64,6 +64,7 @@ import BrandLinks from './BrandLinks.astro';
 
   .role__title {
     margin: 0 0 0 -0.2rem;
+    overflow-wrap: break-word;
     font-size: clamp(1.5rem, 5.4vw, 1.85rem);
     font-weight: 800;
     line-height: 1.1;
@@ -85,6 +86,8 @@ import BrandLinks from './BrandLinks.astro';
     align-items: flex-start;
     gap: 0.6rem;
     margin-left: calc(-0.38em - 0.6rem);
+    min-width: 0;
+    overflow-wrap: break-word;
     font-size: 0.9375rem;
     line-height: 1.5;
     color: color-mix(in srgb, var(--color-ink) 62%, white);
