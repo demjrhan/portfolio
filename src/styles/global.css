@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 @import '@fontsource/aclonica/400.css';
+@import '@fontsource-variable/roboto';
 
 @theme {
   --font-display: 'Aclonica', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Roboto Variable', 'Roboto', ui-sans-serif, system-ui, sans-serif;
 
   --color-ink: #000000;
   --color-dark-gray: #2c2c2c;
@@ -43,6 +45,7 @@ body {
   overflow-x: hidden;
   background: var(--color-paper);
   color: var(--color-ink);
+  font-family: var(--font-sans);
 }
 
 :focus-visible {

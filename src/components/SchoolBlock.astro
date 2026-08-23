@@ -1,25 +1,41 @@
 ---
-import { education } from '../data/education';
+import { education, type School } from '../data/education';
 import { withBase } from '../lib/paths';
 import BrandLinks from './BrandLinks.astro';
+
+interface Props {
+  school?: School;
+}
+
+const { school = education } = Astro.props;
 ---
 
 <div class="school">
   <div class="school__header">
     <div class="school__logo">
-      <img src={withBase(education.logo.src)} alt={education.logo.alt} width="72" height="72" />
+      <img src={withBase(school.logo.src)} alt={school.logo.alt} width="72" height="72" />
     </div>
     <div class="school__copy">
-      <h2 class="school__title">{education.title}</h2>
-      <p class="school__degree">{education.degree}</p>
+      <h2 class="school__title">{school.title}</h2>
+      {school.degree && <p class="school__degree">{school.degree}</p>}
       <div class="school__line">
-        <p class="school__detail">{education.dates}</p>
-        <p class="school__detail">{education.grade}</p>
+        <p class="school__dates">{school.dates}</p>
+        {school.grade && <p class="school__detail">{school.grade}</p>}
       </div>
+      {school.description && <p class="school__description">{school.description}</p>}
+      {
+        school.duties && (
+          <ul class="school__duties">
+            {school.duties.map((duty) => (
+              <li>{duty}</li>
+            ))}
+          </ul>
+        )
+      }
     </div>
   </div>
 
-  <BrandLinks links={education.links} />
+  <BrandLinks links={school.links} />
 </div>
 
 <style>
@@ -63,11 +79,11 @@ import BrandLinks from './BrandLinks.astro';
   }
 
   .school__title {
-    margin: 0;
+    margin: 0 0 0 -0.2rem;
     font-size: clamp(1.5rem, 5.4vw, 1.85rem);
     font-weight: 800;
     line-height: 1.1;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
   }
 
   .school__degree {
@@ -88,12 +104,55 @@ import BrandLinks from './BrandLinks.astro';
   }
 
   .school__dates {
-    margin: 0 0 0 auto;
+    margin: 0;
     flex: none;
     font-size: 0.9375rem;
     font-weight: 700;
     line-height: 1.35;
-    white-space: nowrap;
+  }
+
+  .school__detail {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .school__description {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: color-mix(in srgb, var(--color-ink) 62%, white);
+  }
+
+  .school__duties {
+    margin: 0.85rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .school__duties li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-left: calc(-0.38em - 0.6rem);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: color-mix(in srgb, var(--color-ink) 62%, white);
+  }
+
+  .school__duties li::before {
+    content: '';
+    flex: none;
+    width: 0.38em;
+    height: 0.38em;
+    margin-top: 0.52em;
+    background: var(--color-ink);
+    transform: rotate(45deg);
+  }
+
+  .school__duties li + li {
+    margin-top: 0.55rem;
   }
 
   .school__meta {
@@ -120,6 +179,11 @@ import BrandLinks from './BrandLinks.astro';
     .school__title {
       font-size: clamp(1.75rem, 2.8vw, 2.15rem);
     }
+
+    .school__duties li {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
   }
 
   @media (min-width: 1280px) {
@@ -144,6 +208,11 @@ import BrandLinks from './BrandLinks.astro';
 
     .school__meta {
       font-size: 0.9375rem;
+    }
+
+    .school__duties li {
+      font-size: 0.9375rem;
+      line-height: 1.5;
     }
   }
 </style>

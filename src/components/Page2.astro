@@ -1,0 +1,14 @@
+---
+import { mockExperiences } from '../data/education';
+import EditorialGrid from './EditorialGrid.astro';
+import SchoolBlock from './SchoolBlock.astro';
+---
+
+<div
+  class="relative z-10 flex min-h-0 flex-1 flex-col px-6 pt-0 pb-[max(1.25rem,env(safe-area-inset-bottom))] min-[768px]:px-12 min-[768px]:pb-8 min-[1280px]:px-28 min-[1280px]:pb-14"
+>
+  <EditorialGrid flushTop>
+    <SchoolBlock slot="top" school={mockExperiences[0]} />
+    <SchoolBlock slot="bottom" school={mockExperiences[1]} />
+  </EditorialGrid>
+</div>

@@ -10,7 +10,7 @@ export interface Screen {
 
 export const screens: Screen[] = [
   { id: 'landing', tone: 'white' },
-  { id: 'dark-gray', tone: 'white', gradient: 'orange' },
+  { id: 'dark-gray', tone: 'white' },
   { id: 'white', tone: 'white' },
   { id: 'yellow', tone: 'yellow' },
 ];

@@ -16,7 +16,11 @@ const { screens } = Astro.props;
 >
   <div class="horizontal-scene__pin">
     <div class="horizontal-scene__track" data-horizontal-track>
-      {screens.map((screen) => <Screen screen={screen} />)}
+      {screens.map((screen) => (
+        <Screen screen={screen}>
+          <slot name={screen.id} />
+        </Screen>
+      ))}
     </div>
   </div>
 </div>
