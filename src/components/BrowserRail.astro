@@ -1,0 +1,46 @@
+---
+import BrowserWindow from './BrowserWindow.astro';
+---
+
+<div class="browser-rail" aria-hidden="true">
+  <div class="browser-rail__sticky" data-horizontal-follower>
+    <BrowserWindow />
+  </div>
+</div>
+
+<style>
+  .browser-rail {
+    display: none;
+  }
+
+  /* The rail keeps the window pinned until page 2 has finished leaving, by
+     which point the follower transform has carried it off screen. Offsets
+     mirror the landing padding and the grid ratio in EditorialGrid. */
+  @media (min-width: 1280px) {
+    .browser-rail {
+      --rail-pad-x: 7rem;
+      --rail-top: 6rem;
+      --frame-inset: 2.5rem;
+      --primary-share: 0.6;
+
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 20;
+      height: calc(100% - 3rem);
+      pointer-events: none;
+    }
+
+    .browser-rail__sticky {
+      --browser-aspect: auto;
+
+      position: sticky;
+      top: var(--rail-top);
+      width: calc(var(--primary-share) * (100% - 2 * var(--rail-pad-x)) - 2 * var(--frame-inset));
+      height: calc(100svh - var(--rail-top) - 3rem);
+      margin-left: calc(var(--rail-pad-x) + var(--frame-inset));
+    }
+  }
+</style>

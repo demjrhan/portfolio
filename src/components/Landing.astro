@@ -24,6 +24,8 @@ import GradientGlobe from './GradientGlobe.astro';
 
 <style>
   .landing__browser {
+    --browser-aspect: 1 / 1;
+
     flex: 0 0 auto;
     width: 100%;
     margin-bottom: 0.75rem;
@@ -31,30 +33,16 @@ import GradientGlobe from './GradientGlobe.astro';
 
   @media (min-width: 768px) {
     .landing__browser {
-      --browser-aspect: 2 / 1;
+      --browser-aspect: 3 / 2;
 
       margin-bottom: 1rem;
     }
   }
 
-  /* Desktop places the window inside the empty left column of the grid, so the
-     offsets mirror the landing padding and the grid ratio in EditorialGrid. */
+  /* Desktop keeps the window in BrowserRail so it can span page 1 and page 2. */
   @media (min-width: 1280px) {
     .landing__browser {
-      --browser-aspect: auto;
-      --landing-pad-x: 7rem;
-      --landing-pad-top: 3.5rem;
-      --frame-inset: 2.5rem;
-      --primary-share: 0.6;
-
-      position: absolute;
-      top: calc(var(--landing-pad-top) + var(--frame-inset));
-      left: calc(var(--landing-pad-x) + var(--frame-inset));
-      width: calc(
-        var(--primary-share) * (100% - 2 * var(--landing-pad-x)) - 2 * var(--frame-inset)
-      );
-      height: calc(100svh - var(--landing-pad-top) - var(--frame-inset) - 3rem);
-      margin: 0;
+      display: none;
     }
   }
 </style>

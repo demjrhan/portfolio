@@ -19,21 +19,38 @@ export function bindHorizontalScenes(): void {
         continue;
       }
 
+      // Followers sit beside the scene and travel with the track, so they leave
+      // the viewport together with the panel they belong to.
+      const followers = scene.parentElement
+        ? Array.from(scene.parentElement.querySelectorAll<HTMLElement>('[data-horizontal-follower]'))
+        : [];
+      const shifted = [track, ...followers];
+
       if (!media.matches) {
-        track.style.transform = '';
+        for (const element of shifted) {
+          element.style.transform = '';
+        }
+
         continue;
       }
 
       const range = scene.offsetHeight - window.innerHeight;
 
       if (range <= 0) {
-        track.style.transform = '';
+        for (const element of shifted) {
+          element.style.transform = '';
+        }
+
         continue;
       }
 
       const progress = Math.min(1, Math.max(0, -scene.getBoundingClientRect().top / range));
       const distance = track.scrollWidth - scene.clientWidth;
-      track.style.transform = `translate3d(${-progress * distance}px, 0, 0)`;
+      const transform = `translate3d(${-progress * distance}px, 0, 0)`;
+
+      for (const element of shifted) {
+        element.style.transform = transform;
+      }
     }
   };
 

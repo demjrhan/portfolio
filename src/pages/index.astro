@@ -1,22 +1,26 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HorizontalStrip from '../components/HorizontalStrip.astro';
-import Landing from '../components/Landing.astro';
-import Page2 from '../components/Page2.astro';
-import Screen from '../components/Screen.astro';
-import { desktopSegments, screenById } from '../data/screens';
+import BrowserRail from '../components/BrowserRail.astro';
+import PageSegment from '../components/PageSegment.astro';
+import { browserLastScreen, desktopSegments } from '../data/screens';
+
+const spanEnd =
+  desktopSegments.findIndex((segment) => segment.ids.includes(browserLastScreen)) + 1;
+const spannedSegments = desktopSegments.slice(0, spanEnd);
+const trailingSegments = desktopSegments.slice(spanEnd);
 ---
 
 <BaseLayout>
-  {
-    desktopSegments.map((segment) =>
-      segment.type === 'horizontal' ? (
-        <HorizontalStrip screens={segment.ids.map(screenById)}>
-          <Page2 slot="dark-gray" />
-        </HorizontalStrip>
-      ) : (
-        segment.ids.map((id) => (id === 'landing' ? <Landing /> : <Screen screen={screenById(id)} />))
-      ),
-    )
-  }
+  <div class="browser-span">
+    <BrowserRail />
+    {spannedSegments.map((segment) => <PageSegment segment={segment} />)}
+  </div>
+
+  {trailingSegments.map((segment) => <PageSegment segment={segment} />)}
 </BaseLayout>
+
+<style>
+  .browser-span {
+    position: relative;
+  }
+</style>

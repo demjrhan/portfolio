@@ -1,0 +1,23 @@
+---
+import HorizontalStrip from './HorizontalStrip.astro';
+import Landing from './Landing.astro';
+import Page2 from './Page2.astro';
+import Screen from './Screen.astro';
+import { screenById, type DesktopSegment } from '../data/screens';
+
+interface Props {
+  segment: DesktopSegment;
+}
+
+const { segment } = Astro.props;
+---
+
+{
+  segment.type === 'horizontal' ? (
+    <HorizontalStrip screens={segment.ids.map(screenById)}>
+      <Page2 slot="dark-gray" />
+    </HorizontalStrip>
+  ) : (
+    segment.ids.map((id) => (id === 'landing' ? <Landing /> : <Screen screen={screenById(id)} />))
+  )
+}

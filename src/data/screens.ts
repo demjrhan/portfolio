@@ -25,6 +25,9 @@ export const desktopSegments: DesktopSegment[] = [
   { type: 'vertical', ids: ['yellow'] },
 ];
 
+/** The browser window travels with page 1 and page 2, so it stops after this screen. */
+export const browserLastScreen = 'dark-gray';
+
 export function screenById(id: string): Screen {
   const screen = screens.find((item) => item.id === id);
 
