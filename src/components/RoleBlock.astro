@@ -12,16 +12,14 @@ import BrandLinks from './BrandLinks.astro';
 
     <div class="role__copy">
       <h2 class="role__title">{work.title}</h2>
-      <div class="role__meta">
-        <p class="role__company">{work.company}</p>
-        <BrandLinks links={work.links} />
-      </div>
     </div>
   </div>
 
   <ul class="role__duties">
     {work.duties.map((duty) => <li>{duty}</li>)}
   </ul>
+
+  <BrandLinks links={work.links} />
 </div>
 
 <style>
@@ -73,24 +71,8 @@ import BrandLinks from './BrandLinks.astro';
     letter-spacing: -0.03em;
   }
 
-  .role__meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.1rem 0.25rem;
-  }
-
-  .role__company {
-    margin: 0;
-    font-size: 0.9375rem;
-    font-weight: 600;
-    line-height: 1.3;
-  }
-
-  .role__meta :global(.brand-links) {
-    width: auto;
-    align-self: center;
-    justify-content: flex-start;
+  .role :global(.brand-links) {
+    margin-top: auto;
   }
 
   .role__duties {
